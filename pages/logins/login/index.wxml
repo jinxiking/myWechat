@@ -1,0 +1,32 @@
+<view class='content'>
+  <view class='content_top'>
+    <text class='title_text'>绑定手机号或设备</text>
+  </view>
+
+
+  <view class='login_content'>
+    <input class='tel' placeholder='请输入手机号'></input>
+    <text class='sendCode'>获取验证码</text>
+    <input class='code'  placeholder='请输入验证码'></input>
+  </view>
+
+  <view class='choseBind'>
+    <view class='radio_content'>
+      <image src='../../../public/imgs/chose.png' class='imgs'></image>
+      <text class='radio_label'>我有设备</text>
+    </view>
+
+    <view  class='radio_content'>
+      <image src='../../../public/imgs/nochose.png' class='imgs'></image>
+      <text class='radio_label'>暂无设备</text>
+    </view>
+  </view>  
+
+  <view class='mybutton'>登录</view>  
+
+
+</view>
+<view class='tips'>
+  <text> 看一下科技1.1.0324</text>
+</view>
+

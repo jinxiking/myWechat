@@ -1,0 +1,89 @@
+<!--pages/home/index/index.wxml-->
+<view class='top'>
+  <view class='nav_content'>
+    <image src='../../../public/imgs/home/nav_1.png' class='nav_img'></image>
+    <text class='nav_text'>任务</text>
+  </view>
+  <view class='nav_content'>
+    <image src='../../../public/imgs/home/nav_2.png' class='nav_img'></image>
+    <text class='nav_text'>客流</text>
+  </view>
+  <view class='nav_content'>
+    <image src='../../../public/imgs/home/nav_3.png' class='nav_img'></image>
+    <text class='nav_text'>设备</text>
+  </view>
+</view>
+
+<view class='banner_content'>
+  <image src='../../../public/imgs/home/banner.png' class='banner_img' mode="widthFix"></image>
+</view>
+<view class='line_bg'></view>
+
+<view class='message_content'>
+  <view class='mes_img_cont'>
+    <image  src='../../../public/imgs/home/message.png' class='message_img' mode="widthFix"></image>
+  </view>
+  <view class='mess_swiper'>
+      <swiper
+       indicator-dots="{{indicatorDots}}" 
+       autoplay="{{autoplay}}" 
+       circular="{{circular}}" 
+       vertical="{{vertical}}"
+       interval="{{interval}}" 
+       duration="{{duration}}" 
+       class='swiper_now'
+      >
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item class='swiperitem'>
+            <view class="swiper-item {{item}}">{{item}}</view>
+            <view class="swiper-item {{item}}">{{item}}</view>
+          </swiper-item>
+        </block>
+      </swiper>
+      <image  src='../../../public/imgs/home/row.png' class='row_img' mode="widthFix"></image>
+  </view>
+</view>
+
+<view class='line_bg'></view>
+
+<view class='swiper_content'>
+  <view class='title'>
+    <view class='tips_line'></view>
+    <text class='title_text'>最新任务</text>
+  </view>
+
+  <scroll-view 
+  class='swiper_slider'
+  scroll-x="true" 
+  style=" white-space: nowrap; display: flex" 
+  >
+    
+    <image src='../../../public/imgs/home/swiper.png' class='swiper_img'  mode="widthFix"></image>
+    <image src='../../../public/imgs/home/swiper.png' class='swiper_img'  mode="widthFix"></image>
+    <image src='../../../public/imgs/home/swiper.png' class='swiper_img'  mode="widthFix"></image>
+    <image src='../../../public/imgs/home/swiper.png' class='swiper_img'  mode="widthFix"></image>
+
+  </scroll-view>
+</view>
+
+<view class='line_bg'></view>
+
+
+<view class='swiper_content'>
+  <view class='title'>
+    <view class='tips_line'></view>
+    <text class='title_text'>热门任务</text>
+  </view>
+
+  <view class='hot_content'>
+    <image src='../../../public/imgs/home/hot.png' class='hot_img'  mode="widthFix"></image>
+    <image src='../../../public/imgs/home/hot.png' class='hot_img'  mode="widthFix"></image>
+    <image src='../../../public/imgs/home/hot.png' class='hot_img'  mode="widthFix"></image>
+    <image src='../../../public/imgs/home/hot.png' class='hot_img'  mode="widthFix"></image>
+    <image src='../../../public/imgs/home/hot.png' class='hot_img'  mode="widthFix"></image>
+    <image src='../../../public/imgs/home/hot.png' class='hot_img'  mode="widthFix"></image>
+  </view>
+
+ 
+</view>
+
