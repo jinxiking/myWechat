@@ -1,0 +1,94 @@
+<!--pages/logins/bind/index.wxml-->
+<view class='top_content'>
+  <view class='top_name'>智K盒</view>
+  <view class='top_name'>00:11:22:33:44:55</view>
+  <view class='top_name top_tips'>设备可绑定</view>
+</view>
+
+<view class='bind_content'>
+  <view class='title'>
+    <view class='tips_line'></view>
+    <text class='title_text'>最新任务</text>
+  </view>
+
+
+  <view class='input_content'>
+    <view class='input_item'>
+      <text class='input_text'>手机号码</text>
+      <input class='code'  placeholder='手机号码' class='input'></input>
+    </view>
+    <view class='input_item'>
+      <text class='input_text'>商户名称</text>
+      <input class='code'  placeholder='手机号码' class='input'></input>
+    </view>
+
+    <view class='input_item'>
+      <text class='input_text'>商户类型</text>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{array[index]}}
+          <view class='row_down'>
+            <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+
+    <view class='input_item'>
+      <text class='input_text'>地区</text>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{array[index]}}
+          <view class='row_down'>
+            <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
+          </view>
+        </view>
+      </picker>
+
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{array[index]}}
+          <view class='row_down'>
+            <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
+          </view>
+        </view>
+      </picker>
+
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{array[index]}}
+          <view class='row_down'>
+            <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+
+    <view class='input_item'>
+      <text class='input_text'>地址</text>
+      <input class='code'  placeholder='手机号码' class='input'></input>
+    </view>
+
+    <view class='input_item'>
+      <text class='input_text' style='width:30%;'>过客半径（米）</text>
+      <input class='code'  placeholder='手机号码' class='input'></input>
+    </view>
+
+    <view class='input_item'>
+      <text class='input_text' style='width:30%;'>进店半径（米）</text>
+      <input class='code'  placeholder='手机号码' class='input'></input>
+    </view>
+
+    <view class='input_item'>
+      <text class='input_text' style='width:35%;'>驻店时长（分钟）</text>
+      <input class='code'  placeholder='手机号码' class='input'></input>
+    </view>
+    <view class='button_cont'>
+      <view class='next_button'>
+        下一步
+      </view>
+    </view>
+
+    
+  </view>
+</view>

@@ -1,0 +1,111 @@
+/* pages/logins/bind/index.wxss */
+.top_content{
+  background: #00B1A2;
+  color:#fff;
+  padding-bottom:120rpx;
+  position: relative;
+  z-index: 8;
+}
+.top_name{
+  font-size: 40rpx;
+  padding-top: 30rpx;
+  text-align: center;
+}
+.top_tips{
+  font-size: 25rpx;
+}
+page {
+  background-color: #F6F6F6;
+} 
+.bind_content{
+  padding: 30rpx;
+  border-radius:6rpx;
+  margin-left:20rpx;
+  margin-right:20rpx; 
+  background: #fff;
+  padding-bottom: 80rpx;
+  position: relative;
+  top:-60rpx;
+  z-index: 9;
+}
+.title{
+  display: flex;
+  justify-content: flex-start;
+}
+.tips_line{
+  width: 10rpx;
+  border-radius:5rpx;
+  background:  #00B1A2;
+}
+.title_text{
+  font-size: 30rpx;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+  margin-left: 10rpx;
+}
+.input_content{
+  margin-top: 50rpx;
+}
+.input_content{
+  font-size: 25rpx;
+}
+.input_item{
+  display: flex;
+  margin-top:30rpx;
+}
+.input_text{
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 20%;
+}
+.input{
+  width: 80%;
+  margin-left:20rpx;
+  border-bottom:1px solid rgba(0,0,0,0.1); 
+}
+
+.picker{
+  padding: 10rpx;
+  border:1px solid rgba(0,0,0,0.1);
+  margin-left: 20rpx;
+  padding-right:80rpx; 
+  padding-left:20rpx; 
+  position: relative;
+  border-radius:5rpx; 
+}
+
+.row_down{
+  border-left:1px solid  rgba(0,0,0,0.1); 
+  height: 100%;
+  position: absolute;
+  /* right: 50rpx; */
+  right: 0;
+  width: 50rpx;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select_imgs{
+  width: 20rpx;
+}
+
+.button_cont{
+  display: flex;
+  justify-content: center;
+  margin-top: 30rpx;
+}
+
+.next_button{
+  display: flex;
+  height: 80rpx;
+  background: #08B4A3;
+  margin-top: 50rpx;
+  color:#fff;
+  line-height: 80rpx;
+  font-size: 38rpx;
+  justify-content: center;
+  width: 200rpx;
+  border-radius:40rpx;
+}
