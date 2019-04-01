@@ -45,6 +45,7 @@
   color:rgba(0,0,0,0.5);
   top:40rpx;
   right: 0;
+  z-index: 10;
 }
 
 .choseBind{
@@ -79,3 +80,10 @@
   justify-content: center;
 }
 
+.canSend{
+  color:#00B1A2;
+}
+
+.canSubmit{
+  background: #1bb0a2!important;
+}

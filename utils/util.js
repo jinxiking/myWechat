@@ -1,3 +1,5 @@
+const app = getApp();
+
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -14,6 +16,35 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const ajax = (option) =>{
+  var token = app.globalData.token;
+  if(!token){
+    app.doLogin();
+    return;
+  }
+  wx.request({
+    url: app.globalData.url + option.url,
+    data: option.data,
+    method: option.method,
+    header : {
+      token: token
+    },
+    success : (res)=>{
+      
+      if (res.data.code == 200){
+      
+        option.success(res);
+      } else if (res.data.code == 401){
+        //重新登录流程
+        app.doLogin();
+      }
+    }
+  })
+}
+
+
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  ajax: ajax
 }

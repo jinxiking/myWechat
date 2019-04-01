@@ -1,28 +1,31 @@
 <view class='content'>
-  <view class='content_top'>
+  <view class='content_top' >
     <text class='title_text'>绑定手机号或设备</text>
   </view>
 
 
   <view class='login_content'>
-    <input class='tel' placeholder='请输入手机号'></input>
-    <text class='sendCode'>获取验证码</text>
-    <input class='code'  placeholder='请输入验证码'></input>
+    <input class='tel' placeholder='请输入手机号' value='{{tel}}' type='number' bindinput="bindTelInput" maxlength='11'></input>
+    <view bindtap='sendCode' class='sendCode {{tel.length != 0?"canSend":""}}' >
+      <text >{{number?number:'获取验证码'}}</text>
+    </view>
+    
+    <input class='code'  placeholder='请输入验证码' maxlength='6' value='{{vcode}}' bindinput="bindcodeInput"></input>
   </view>
 
   <view class='choseBind'>
-    <view class='radio_content'>
-      <image src='../../../public/imgs/chose.png' class='imgs'></image>
+    <view class='radio_content' bindtap='choseRadio' id='radio0'>
+      <image src='{{radio}}' class='imgs'></image>
       <text class='radio_label'>我有设备</text>
     </view>
 
-    <view  class='radio_content'>
-      <image src='../../../public/imgs/nochose.png' class='imgs'></image>
+    <view  class='radio_content' bindtap='choseRadio' id='radio1'>
+      <image src='{{radio1}}' class='imgs'></image>
       <text class='radio_label'>暂无设备</text>
     </view>
   </view>  
 
-  <view class='mybutton'>登录</view>  
+  <view class='mybutton {{vcode?"canSubmit":""}}'>登录</view>  
 
 
 </view>
