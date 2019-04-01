@@ -1,0 +1,124 @@
+<!--page<!--pages/logins/bind/index.wxml-->
+<view class='top_content'>
+  <view class='shop_name'>
+    <text class='shop_text'>当前门店：天语通讯X店</text>
+    <text class='shop_today'>查看当日明细></text>
+  </view>
+  <view class='top_name'>
+    <view>
+      <text>388</text>
+      <text class='tip_text'>路过人数</text>
+    </view>
+    <view>
+      <text>388</text>
+      <text class='tip_text'>路过人数</text>
+    </view>
+    <view>
+      <text>388</text>
+      <text class='tip_text'>进店率%</text>
+    </view>
+  
+  </view>
+  <view class='top_name'>
+    <view>
+      <text>388</text>
+      <text class='tip_text'>路过人数</text>
+    </view>
+    <view>
+      <text>388</text>
+      <text class='tip_text'>路过人数</text>
+    </view>
+    <view>
+      <text>388</text>
+      <text class='tip_text'>进店率%</text>
+    </view>
+  
+  </view>
+</view>
+
+<view class='bind_content'>
+  <view class='title'>
+    <view class='tips_line'></view>
+    <text class='title_text'>最新任务</text>
+  </view>
+
+  <view class='my_tab'>
+    <view class='tab_cont'>
+      <view class='line_right'>日</view>
+      <view>月</view>
+    </view>
+  </view>
+
+  <view class='input_content'>
+  
+
+    <view class='input_item'>
+      <text class='input_text'>开始时间</text>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{array[index]}}
+          <view class='row_down'>
+            <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
+          </view>
+        </view>
+      </picker>
+
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{array[index]}}
+          <view class='row_down'>
+            <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
+          </view>
+        </view>
+      </picker>
+
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{array[index]}}
+          <view class='row_down'>
+            <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+
+    <view class='input_item'>
+      <text class='input_text'>结束时间</text>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{array[index]}}
+          <view class='row_down'>
+            <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
+          </view>
+        </view>
+      </picker>
+
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{array[index]}}
+          <view class='row_down'>
+            <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
+          </view>
+        </view>
+      </picker>
+
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{array[index]}}
+          <view class='row_down'>
+            <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+    
+    <view class='button_cont'>
+      <view class='next_button'>
+        查询
+      </view>
+    </view>
+
+    
+  </view>
+
+</view>

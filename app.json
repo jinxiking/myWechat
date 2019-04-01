@@ -1,10 +1,14 @@
 {
   "pages": [
-    "pages/logins/bind/index",
     "pages/home/index/index",
+    "pages/passenger/query/index",
+    "pages/logins/sendCode/index",
+    "pages/logins/bind/index",
+    
     "pages/logins/login/index",
     "pages/index/index",
     "pages/logs/logs"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

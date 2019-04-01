@@ -2,13 +2,20 @@ Page({
   data: {
     background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
     indicatorDots: false,
+    indicatorDotss : true,
     vertical: true,
     autoplay: true,
     circular: false,
     interval: 2000,
     duration: 500,
     previousMargin: 0,
-    nextMargin: 0
+    nextMargin: 0,
+    current : 0
+  },
+  bindchange(index){
+    this.setData({
+      current: index.detail.current
+    })
   },
   changeProperty: function (e) {
     var propertyName = e.currentTarget.dataset.propertyName

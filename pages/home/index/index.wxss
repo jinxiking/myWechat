@@ -26,6 +26,7 @@
 
 .banner_content{
   padding: 30rpx;
+  padding-bottom: 0;
 }
 .banner_img{
   width: 100%;
@@ -55,8 +56,9 @@
   margin-left: 10rpx;
 }
 .swiper_img{
-  width: 400rpx!important;
-  margin-right: 30rpx;
+  width: 49%;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
 }
 .swiper_slider{
   padding-top: 30rpx;
@@ -77,6 +79,7 @@
   margin-top: 20rpx;
   box-shadow:0px 0px 10px 0px rgba(4,0,0,0.06);
 }
+
 .message_content{
   padding: 30rpx;
   display: flex;
@@ -95,7 +98,6 @@
 }
 .swiper_now{
   height: 100%;
-  
 }
 .swiperitem{
   display: flex;
@@ -109,4 +111,30 @@
   right: 10rpx;
   top:50rpx;
   z-index: 99;
+}
+.new_renwu{
+  display: flex;
+  justify-content: space-between;
+}
+.banner_content{
+  height: 230rpx;
+}
+
+.swiper_current{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top:-30rpx;
+}
+
+.current_item{
+  width: 10rpx;
+  height: 10rpx;
+  background: #DCDCDC;
+  margin-right: 10rpx;
+  transition: all 0.2s ease;
+}
+.active{
+  width: 32rpx;
+  background:#00B1A2!important;
 }

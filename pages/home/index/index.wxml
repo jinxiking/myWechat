@@ -15,7 +15,27 @@
 </view>
 
 <view class='banner_content'>
-  <image src='../../../public/imgs/home/banner.png' class='banner_img' mode="widthFix"></image>
+  <swiper
+    indicator-dots="{{indicatorDots}}" 
+    autoplay="{{autoplay}}" 
+    current = "{{current}}"
+    class='swiper_now'
+    bindchange = 'bindchange'
+    >
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <image src='../../../public/imgs/home/banner.png' class='banner_img' mode="widthFix"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='swiper_current'>
+    <block wx:for="{{background}}" wx:key="*this">
+      <view class="current_item {{current == index ? 'active':'' }}">
+
+      </view>
+    </block>
+  </view>
+
 </view>
 <view class='line_bg'></view>
 
@@ -52,18 +72,14 @@
     <text class='title_text'>最新任务</text>
   </view>
 
-  <scroll-view 
-  class='swiper_slider'
-  scroll-x="true" 
-  style=" white-space: nowrap; display: flex" 
+  <view 
+  class='new_renwu' 
   >
     
     <image src='../../../public/imgs/home/swiper.png' class='swiper_img'  mode="widthFix"></image>
     <image src='../../../public/imgs/home/swiper.png' class='swiper_img'  mode="widthFix"></image>
-    <image src='../../../public/imgs/home/swiper.png' class='swiper_img'  mode="widthFix"></image>
-    <image src='../../../public/imgs/home/swiper.png' class='swiper_img'  mode="widthFix"></image>
 
-  </scroll-view>
+  </view>
 </view>
 
 <view class='line_bg'></view>

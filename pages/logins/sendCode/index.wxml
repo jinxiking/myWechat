@@ -1,0 +1,27 @@
+<!--pages/logins/sendCode/index.wxml-->
+
+<view class='top_content'>
+  <text>店铺名字</text>
+</view>
+<view class='tips'>
+  <text>请输入6位验证码</text>
+</view>
+<view class='content'>
+  <view class='input_content'>
+    <input class='code' maxlength='1'></input>
+    <input class='code' maxlength='1'></input>
+    <input class='code' maxlength='1'></input>
+    <input class='code' maxlength='1'></input>
+    <input class='code' maxlength='1'></input>
+    <input class='code' maxlength='1'></input>
+  </view>
+
+</view>
+
+<view class='button_cont'>
+  <view class='next_button'>
+    确认绑定
+  </view>
+</view>
+
+
