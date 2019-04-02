@@ -98,5 +98,18 @@ Page({
         choseRadio: 1
       })
     }
+  },
+  submit(){
+    //验证验证码是否正确
+    if (!this.data.choseRadio){
+      //扫码绑定流程
+    }else{
+      //无设备做手机号绑定直接进入首页
+      wx.navigateTo({
+        url: '/pages/home/index/index',
+      })
+    }
   }
+
+
 })

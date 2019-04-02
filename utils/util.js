@@ -34,9 +34,9 @@ const ajax = (option) =>{
       if (res.data.code == 200){
       
         option.success(res);
-      } else if (res.data.code == 401){
+      } else if (res.data.code == 1001){
         //重新登录流程
-        app.doLogin();
+        app.doLogin(ajax(option));
       }
     }
   })

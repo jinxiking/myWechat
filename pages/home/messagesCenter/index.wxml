@@ -1,0 +1,123 @@
+<!--pages/home/messagesCenter/index.wxml-->
+<view class='content'>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+    <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+    <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+    <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+    <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+  <view class='list_item'>
+    <text class='title'>智k盒系统升级通知</text>
+    <text class='time'>2019-3-14</text>
+  </view>
+</view>

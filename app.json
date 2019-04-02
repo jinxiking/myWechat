@@ -1,12 +1,14 @@
 {
   "pages": [
+    "pages/home/task/index",
+    "pages/home/mesDetail/index",
+    "pages/home/messagesCenter/index",
+    "pages/home/activity/index",
     "pages/logins/login/index",
     "pages/home/index/index",
     "pages/passenger/query/index",
     "pages/logins/sendCode/index",
     "pages/logins/bind/index",
-    
-    
     "pages/index/index",
     "pages/logs/logs"
     

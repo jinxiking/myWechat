@@ -1,0 +1,74 @@
+/* pages/home/task/index.wxss */
+.contentP{
+  background: #fff;
+}
+page {
+  background-color: #F6F6F6;
+} 
+.title{
+  font-size: 32rpx;
+  color:#333333;
+}
+.task_detail{
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 26rpx;
+}
+.task_name{
+  color:#999999;
+  min-width: 120rpx;
+}
+
+.task_new_name{
+  color:#333333;
+  min-width: 120rpx;
+}
+
+.task_val{
+  color:#333333;
+  margin-left: 20rpx;
+}
+.line{
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.task_new{
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+}
+
+.row_img{
+  width: 25rpx;
+}
+.icon_img{
+  width: 26rpx;
+  position: relative;
+  top:3rpx;
+}
+.state_val{
+  margin-left: 15rpx;
+}
+
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layer_content{
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 3px;
+  width:70%;
+}

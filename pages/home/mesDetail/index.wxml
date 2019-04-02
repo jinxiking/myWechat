@@ -1,0 +1,9 @@
+<!--pages/home/mesDetail/index.wxml-->
+<view class='contentP'>
+  <view class='title'>公告中心</view>
+  <text class='time'>2019-3-14</text>
+  <view class='drocont'>
+    内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+    内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+  </view>
+</view>

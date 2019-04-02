@@ -13,7 +13,7 @@ App({
       this.doLogin();
     }
   },
-  doLogin: function () {
+  doLogin: function (done) {
     let _this = this;
     wx.login({
       success: res => {
@@ -29,6 +29,7 @@ App({
             let token = res.data.data.Token;
             wx.setStorageSync('token', token);
             _this.globalData.token = token;
+            if (done) done()
           } 
         })
       }

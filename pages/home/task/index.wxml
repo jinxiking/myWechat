@@ -1,0 +1,74 @@
+<!--pages/home/task/index.wxml-->
+<view class='contentP'>
+  <view class='title'>任务简介</view>
+  <view class='task_detail'>
+    <text class='task_name'>任务名称:</text>
+    <text class='task_val'>京东拉新</text>
+  </view>
+  <view class='task_detail'>
+    <text class='task_name'>结算价格:</text>
+    <text class='task_val'>京东拉新京东拉新京东拉新京东拉新京东拉新京东拉新京东拉新</text>
+  </view>
+  <view class='task_detail'>
+    <text class='task_name'>结算周期:</text>
+    <text class='task_val'>京东拉新京东拉新</text>
+  </view>
+  <view class='task_detail'>
+    <text class='task_name'>任务价格:</text>
+    <text class='task_val'>京东拉新京东拉新京东拉新</text>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='task_new'>
+    <text class='task_new_name'>任务攻略:</text>
+    <image  src='../../../public/imgs/home/row.png' class='row_img' mode="widthFix"></image>
+  </view>
+  <view class='task_new'>
+    <text class='task_new_name'>任务详情:</text>
+    <image  src='../../../public/imgs/home/row.png' class='row_img' mode="widthFix"></image>
+  </view>
+</view>
+
+
+
+<view class='contentP mt30'>
+  <view class='title'>任务申请</view>
+  <view class='task_new'>
+    <text class='task_new_name'>通讯1天:</text>
+    <view>
+      <image  src='../../../public/imgs/home/apply.png' class='icon_img' mode="widthFix"></image>
+      <text class='state_val'>申请</text>
+    </view>
+  </view>
+  <view class='task_new'>
+    <text class='task_new_name'>通讯1天:</text>
+    <view>
+      <image  src='../../../public/imgs/home/shenhezhong.png' class='icon_img' mode="widthFix"></image>
+      <text class='state_val'>已通过</text>
+    </view>
+  </view>
+  <view class='task_new'>
+    <text class='task_new_name'>通讯1天:</text>
+    <view>
+      <image  src='../../../public/imgs/home/throw.png' class='icon_img' mode="widthFix"></image>
+      <text class='state_val'>审核中</text>
+    </view>
+  </view>
+</view>
+
+<view class='mask'>
+  <view class='layer_content'>
+    <view class='layer_title'>
+    
+      <text>申请成功</text>
+    </view>
+    <view class=''>
+      <text>审核将于24小时之内完成</text>
+    </view>
+    <view>
+      
+      <text>申请成功</text>
+    </view>
+  </view>
+</view>
