@@ -60,15 +60,15 @@
 <view class='mask'>
   <view class='layer_content'>
     <view class='layer_title'>
-    
+      <image  src='../../../public/imgs/suc.png' class='layer_suc_icon' mode="widthFix"></image>
       <text>申请成功</text>
     </view>
-    <view class=''>
+    <view class='layer_dro'>
       <text>审核将于24小时之内完成</text>
     </view>
-    <view>
-      
-      <text>申请成功</text>
+    <view class='btn-cont'>
+
+      <view class='apply_btn_suc'>返回</view>
     </view>
   </view>
 </view>

@@ -72,3 +72,44 @@ page {
   border-radius: 3px;
   width:70%;
 }
+
+.layer_title{
+  display: flex;
+  justify-content: center;
+  height: 60rpx;
+  font-size: 31rpx;
+  margin-top: 20rpx;
+  line-height: 60rpx;
+  color:#333333;
+}
+.layer_suc_icon{
+  width: 30rpx;
+  position: relative;
+  top:20rpx;
+  margin-right: 10rpx;
+}
+
+.layer_dro{
+  font-size: 27rpx;
+  display: flex;
+  justify-content: center;
+  color:#666666;
+  margin-top: 30rpx;
+} 
+.btn-cont{
+  display: flex;
+  justify-content: center;
+}
+.apply_btn_suc{
+  width: 150rpx;
+  font-size: 26rpx;
+  background: #00B1A2;
+  text-align: center;
+  height: 68rpx;
+  line-height: 68rpx;
+  color:#fff;
+  margin-top: 80rpx;
+  margin-bottom: 30rpx;
+  border-radius:3px; 
+}
+

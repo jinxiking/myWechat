@@ -1,0 +1,64 @@
+<!--pages/home/BillingDetail/index.wxml-->
+<view class='detail_item position'>
+  <view class='time_item'>
+    2019-3-15
+  </view>
+
+  <view class='item_num'>
+    <text>数量：18</text>
+    <text>金额：250</text>
+  </view>
+</view>
+
+<view class='line_tip'>
+  <text>唯一识别号</text>
+  <text>备注</text>
+</view>
+
+<view class='detail_item'>
+  <view class='item_num'>
+    <text style='color:#333'>13734256790</text>
+    <text style='font-size:19rpx;'>2019-3-15 16:05</text>
+
+  </view>
+
+  <view class='item_num_bottom'>
+    <view>sdadsadads18asdasdadasdasdasdasdasdasdadadasdasdad</view>
+  </view>
+</view>
+<view class='detail_item'>
+  <view class='item_num'>
+    <text style='color:#333'>13734256790</text>
+    <text style='font-size:19rpx;'>2019-3-15 16:05</text>
+
+  </view>
+
+  <view class='item_num_bottom'>
+    <view>sdadsadads18asdasdadasdasdasdasdasdasdadadasdasdad</view>
+  </view>
+</view>
+
+<view class='detail_item'>
+  <view class='item_num'>
+    <text style='color:#333'>13734256790</text>
+    <text style='font-size:19rpx;'>2019-3-15 16:05</text>
+
+  </view>
+
+  <view class='item_num_bottom'>
+    <view>sdadsadads18asdasdadasdasdasdasdasdasdadadasdasdad</view>
+  </view>
+</view>
+
+<view class='detail_item'>
+  <view class='item_num'>
+    <text style='color:#333'>13734256790</text>
+    <text style='font-size:19rpx;'>2019-3-15 16:05</text>
+
+  </view>
+
+  <view class='item_num_bottom'>
+    <view>sdadsadads18asdasdadasdasdasdasdasdasdadadasdasdad</view>
+  </view>
+</view>
+

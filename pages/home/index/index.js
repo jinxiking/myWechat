@@ -1,3 +1,4 @@
+const util = require('../../../utils/util.js');
 Page({
   data: {
     background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
@@ -10,37 +11,66 @@ Page({
     duration: 500,
     previousMargin: 0,
     nextMargin: 0,
-    current : 0
+    current : 0,
+    bannerList : [],
+    cementList : []
+  },
+  onLoad: function (options) {
+    this.getBanner();
+    this.getAnnouncement();
   },
   bindchange(index){
     this.setData({
       current: index.detail.current
     })
   },
-  changeProperty: function (e) {
-    var propertyName = e.currentTarget.dataset.propertyName
-    var newData = {}
-    newData[propertyName] = e.detail.value
-    this.setData(newData)
-  },
-  changeIndicatorDots: function (e) {
-    this.setData({
-      indicatorDots: !this.data.indicatorDots
+  getAnnouncement(){
+    util.ajax({
+      url: '/v1/notice/get-list',
+      method: 'GET',
+      data : {
+        page : 1,
+        pageSize : 6
+      },
+      success: (res) => {
+        let arr = [];
+        for (let i in res.data.data){
+          if(i == 0){
+            arr.push([res.data.data[i]]);
+          }else if(i == 1){
+            arr[0].push(res.data.data[i]);
+          }else if(i == 2){
+            arr[1] = [];
+            arr[1].push(res.data.data[i])
+          }else if(i == 3){
+            arr[1].push(res.data.data[i])
+          }else if(i == 4){
+            arr[2] = [];
+            arr[2].push(res.data.data[i])
+          } else if (i == 5){
+            arr[2].push(res.data.data[i])
+          }
+        }
+        this.setData({
+          cementList: arr
+        });
+      }
     })
   },
-  changeAutoplay: function (e) {
-    this.setData({
-      autoplay: !this.data.autoplay
+  getBanner(){
+    util.ajax({
+      url: '/v1/banner/get-banner',
+      method: 'GET',
+      success: (res) => {
+        this.setData({
+          bannerList : res.data
+        })
+      }
     })
   },
-  intervalChange: function (e) {
-    this.setData({
-      interval: e.detail.value
-    })
-  },
-  durationChange: function (e) {
-    this.setData({
-      duration: e.detail.value
+  toCementList(){
+    wx.navigateTo({
+      url: '/pages/home/messagesCenter/index',
     })
   }
 })

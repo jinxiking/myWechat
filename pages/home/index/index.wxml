@@ -1,17 +1,29 @@
 <!--pages/home/index/index.wxml-->
 <view class='top'>
-  <view class='nav_content'>
-    <image src='../../../public/imgs/home/nav_1.png' class='nav_img'></image>
-    <text class='nav_text'>任务</text>
-  </view>
-  <view class='nav_content'>
-    <image src='../../../public/imgs/home/nav_2.png' class='nav_img'></image>
-    <text class='nav_text'>客流</text>
-  </view>
-  <view class='nav_content'>
-    <image src='../../../public/imgs/home/nav_3.png' class='nav_img'></image>
-    <text class='nav_text'>设备</text>
-  </view>
+  <navigator
+    url="/pages/home/myActivyList/index"
+  >
+    <view class='nav_content' bindtap='' href=''>
+      <image src='../../../public/imgs/home/nav_1.png' class='nav_img'></image>
+      <text class='nav_text'>任务</text>
+    </view> 
+  </navigator>
+  <navigator
+    url="/pages/home/myActivyList/index"
+  >
+    <view class='nav_content'>
+      <image src='../../../public/imgs/home/nav_2.png' class='nav_img'></image>
+      <text class='nav_text'>客流</text>
+    </view>
+  </navigator>
+  <navigator
+    url="/pages/home/myActivyList/index"
+  >
+    <view class='nav_content'>
+      <image src='../../../public/imgs/home/nav_3.png' class='nav_img'></image>
+      <text class='nav_text'>设备</text>
+    </view>
+  </navigator>
 </view>
 
 <view class='banner_content'>
@@ -22,14 +34,14 @@
     class='swiper_now'
     bindchange = 'bindchange'
     >
-    <block wx:for="{{background}}" wx:key="*this">
+    <block wx:for="{{bannerList}}" wx:for-item='item' wx:key="index">
       <swiper-item>
-        <image src='../../../public/imgs/home/banner.png' class='banner_img' mode="widthFix"></image>
+        <image src='{{item.top_images}}' class='banner_img' mode="widthFix"></image>
       </swiper-item>
     </block>
   </swiper>
   <view class='swiper_current'>
-    <block wx:for="{{background}}" wx:key="*this">
+    <block wx:for="{{bannerList}}" wx:for-item='item'  wx:key="index">
       <view class="current_item {{current == index ? 'active':'' }}">
 
       </view>
@@ -43,20 +55,19 @@
   <view class='mes_img_cont'>
     <image  src='../../../public/imgs/home/message.png' class='message_img' mode="widthFix"></image>
   </view>
-  <view class='mess_swiper'>
+  <view class='mess_swiper' bindtap='toCementList'>
       <swiper
-       indicator-dots="{{indicatorDots}}" 
-       autoplay="{{autoplay}}" 
-       circular="{{circular}}" 
-       vertical="{{vertical}}"
-       interval="{{interval}}" 
-       duration="{{duration}}" 
-       class='swiper_now'
+      indicator-dots="{{indicatorDots}}" 
+      autoplay="{{autoplay}}" 
+      circular="{{circular}}" 
+      vertical="{{vertical}}"
+      interval="{{interval}}" 
+      duration="{{duration}}" 
+      class='swiper_now'
       >
-        <block wx:for="{{background}}" wx:key="*this">
+        <block wx:for="{{cementList}}" wx:key="index">
           <swiper-item class='swiperitem'>
-            <view class="swiper-item {{item}}">{{item}}</view>
-            <view class="swiper-item {{item}}">{{item}}</view>
+            <view class="swiper-item {{item}}" wx:for="{{item}}" wx:for-item="items" wx:for-index="indexs"                             wx:key="indexs">{{items.notice_title}}</view>
           </swiper-item>
         </block>
       </swiper>
