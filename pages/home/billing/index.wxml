@@ -1,0 +1,83 @@
+<!--pages/home/billing/index.wxml-->
+<view class='top_bg'>
+
+</view>
+<image src='../../../public/imgs/home/round.png' class='bg_round' mode="widthFix"></image>
+
+<view class='card'>
+  <view class='top_card'>
+    <view class='card_item'>
+      <view class='cB1'>
+        <text class='num'>480</text>
+        <text class='f26'>个</text>
+      </view>
+      <view style='margin-top:30rpx;'>
+        <text class='f26'>有效完成</text>
+      </view>
+    </view>
+    <view class='card_item'>
+      <view class='cB1'>
+        <text class='num f62'>480</text>
+        <text class='f26'>个</text>
+      </view>
+      <view style='margin-top:30rpx;'>
+        <text class='f26'>已结算</text>
+      </view>
+    </view>
+    <view class='card_item'>
+      <view class='cB1'>
+        <text class='num'>480</text>
+        <text class='f26'>个</text>
+      </view>
+      <view style='margin-top:30rpx;'>
+        <text class='f26'>待结算</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='upTime f23'>更新时间：2019-3-16 15:03</view>
+</view>
+
+<view class='detail_dom'>
+  <view class='task_detail'>
+    <text class='task_name'>任务名称:</text>
+    <text class='task_val'>京东拉新</text>
+    <image src='../../../public/imgs/home/guanlian.png' class='icon' mode="widthFix"></image>
+  </view>
+  <view class='task_detail'>
+    <text class='task_name'>结算价格:</text>
+    <text class='task_val'>京东拉新京东拉新京东拉新</text>
+  </view>
+  <view class='task_detail'>
+    <text class='task_name'>结算周期:</text>
+    <text class='task_val'>京东拉新京东拉新</text>
+    <image src='../../../public/imgs/home/wenhao.png' class='icon' mode="widthFix"></image>
+  </view>
+</view>
+
+<view class='line_bg' style='margin-top:20rpx;'></view>
+
+<view class='list_cont'>
+  <line-title title='结算明细'></line-title>
+  <view class='table_title f23'>  
+    <text>日期</text>
+    <text>数量</text>
+    <text>金额</text>
+  </view>
+
+  <view class='table_item f23'>  
+    <text>2019-3-13</text>
+    <text class='click'>18</text>
+    <text>18</text>
+  </view>
+
+</view>
+
+<view class='footer f23'>
+  <view class='footer_text_cont'>
+    <view class='text_line'>本服务官方客服微信公众号</view>
+    <view class='text_line'>任何过程中任何问题均可提供咨询解答</view>
+  </view>
+  <image src='../../../public/imgs/home/erweima.png' class='footer_img' mode="widthFix"></image>
+</view>
+

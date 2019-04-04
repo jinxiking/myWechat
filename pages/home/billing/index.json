@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#00B1A2",
+  "navigationBarTitleText": "结算详情",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "line-title": "/components/lineTitle/line-title"
+  }
+}

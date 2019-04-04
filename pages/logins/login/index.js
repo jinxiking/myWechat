@@ -58,7 +58,6 @@ Page({
     })
   },
   sendCode(){
-  
     if (this.data.tel.length == 0 || timeFlag){
       return;
     }
@@ -69,13 +68,12 @@ Page({
       })
       return;
     }
-    console.log(util)
     util.ajax({
       url: '/v1/user/send-code',
       method: 'POST',
       data : {
         phone : this.data.tel,
-        type : 1
+        type : 0
       },
       success : ()=>{
         
@@ -101,15 +99,57 @@ Page({
   },
   submit(){
     //验证验证码是否正确
-    if (!this.data.choseRadio){
-      //扫码绑定流程
-    }else{
-      //无设备做手机号绑定直接进入首页
-      wx.navigateTo({
-        url: '/pages/home/index/index',
+    if (this.data.vcode.length != 4){
+      wx.showToast({
+        title: '请输入正确的验证码',
+        icon: 'none',
       })
+    } 
+
+    if (!this.vetifyTel(this.data.tel)) {
+      wx.showToast({
+        title: '手机号码格式不正确',
+        icon: 'none'
+      })
+      return;
     }
-  }
+
+    let type = 2;
+    if (!this.data.choseRadio) {
+      //扫码绑定流程
+      type = 3;
+    } else {
+      //无设备做手机号绑定直接进入首页
+      type = 2;
+    }
+    util.ajax({
+      url: '/v1/user/info-add',
+      method: 'POST',
+      data: {
+        user_name: this.data.tel,
+        is_device: type,
+        code : this.data.vcode
+      },
+      success: (res) => {
+        if (!this.data.choseRadio) {
+          //扫码绑定流程
+          wx.scanCode({
+            success: (res)=>{
+              console.log(res);
+            }
+          })
+        } else {
+          //无设备做手机号绑定直接进入首页
+          wx.navigateTo({
+            url: '/pages/home/index/index',
+          })
+        }
+      }
+    })
+
+   
+  },
+
 
 
 })

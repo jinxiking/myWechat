@@ -1,0 +1,10 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#00B1A2",
+  "navigationBarTitleText": "客流明细",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#f6f6f8",
+  "usingComponents": {
+    "line-title": "/components/lineTitle/line-title"
+  }
+}

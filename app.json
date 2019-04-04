@@ -1,19 +1,22 @@
 {
   "pages": [
+    "pages/logins/login/index",
     "pages/home/index/index",
+    "pages/home/billing/index",
+    "pages/passenger/detail/index",
+    "pages/passenger/query/index",
+    "pages/home/activeLink/index",
     "pages/home/BillingDetail/index",
     "pages/home/myActivyList/index",
     "pages/home/task/index",
     "pages/home/mesDetail/index",
     "pages/home/messagesCenter/index",
     "pages/home/activity/index",
-    "pages/logins/login/index",
-    "pages/passenger/query/index",
+    
     "pages/logins/sendCode/index",
     "pages/logins/bind/index",
     "pages/index/index",
     "pages/logs/logs"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",

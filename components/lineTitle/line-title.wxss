@@ -1,0 +1,16 @@
+/* components/lineTitle/line-title.wxss */
+.title{
+  display: flex;
+  justify-content: flex-start;
+}
+.tips_line{
+  width: 10rpx;
+  border-radius:5rpx;
+  background:  #00B1A2;
+}
+.title_text{
+  font-size: 30rpx;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+  margin-left: 10rpx;
+}

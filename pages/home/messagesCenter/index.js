@@ -36,6 +36,10 @@ Page({
     })
     this.loadList();
   },
+  fomatDate(val){
+    console.log(util.formatDate(val))
+    return util.formatDate(val)
+  },
 
   loadList(){
     
@@ -58,5 +62,11 @@ Page({
       }
     })
     
+  },
+  mesDetail(e){
+    let id = e.currentTarget.id;
+    wx.navigateTo({
+      url: '/pages/home/mesDetail/index?id=' + id,
+    })
   }
 })

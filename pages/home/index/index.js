@@ -13,11 +13,47 @@ Page({
     nextMargin: 0,
     current : 0,
     bannerList : [],
-    cementList : []
+    cementList : [],
+    hotList : [],
+    newList : []
   },
   onLoad: function (options) {
     this.getBanner();
     this.getAnnouncement();
+    this.hotList();
+    this.newList();
+  },
+  newList(){
+    util.ajax({
+      url: '/v1/task/get-list',
+      method: 'GET',
+      data: {
+        page: 1,
+        pageSize: 2,
+        type: 1
+      },
+      success: (res) => {
+        this.setData({
+          newList: res.data.data
+        })
+      }
+    })
+  },
+  hotList(){
+    util.ajax({
+      url: '/v1/task/get-list',
+      method: 'GET',
+      data: {
+        page: 1,
+        pageSize: 6,
+        type : 2
+      },
+      success: (res) => {
+        this.setData({
+          hotList : res.data.data
+        })
+      }
+    })
   },
   bindchange(index){
     this.setData({
@@ -71,6 +107,13 @@ Page({
   toCementList(){
     wx.navigateTo({
       url: '/pages/home/messagesCenter/index',
+    })
+  },
+  toActive(e){
+    console.log(e)
+    let id = e.currentTarget.id;
+    wx.navigateTo({
+      url: '/pages/home/activity/index?id=' + id,
     })
   }
 })

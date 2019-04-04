@@ -1,0 +1,69 @@
+/* pages/passenger/detail/index.wxss */
+.top_content{
+  background: #00B1A2;
+  color:#fff;
+  padding-bottom:30rpx;
+  position: relative;
+  z-index: 8;
+  padding-top:30rpx; 
+}
+.top_name{
+  margin-top: 50rpx;
+  font-size: 60rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.tip_text{
+  font-size: 25rpx;
+}
+.top_name view{
+  display: flex;
+  flex-direction: column;
+}
+.top_name view text{
+  text-align: center; 
+}
+.top_tips{
+  font-size: 25rpx;
+}
+
+.dro_cont{
+  font-size: 23rpx;
+  display: flex;
+  justify-content: center;
+  margin-top: 50rpx;
+}
+
+.list_cont{
+  padding: 30rpx;
+}
+
+.table_title{
+  color:#999999;
+  border-top:1px solid rgba(0,0,0,0.1); 
+  border-bottom:1px solid rgba(0,0,0,0.1); 
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+
+  text-align: center;
+}
+.table_title text{
+  width: 20%;
+}
+
+.table_item{
+  color:#999999;
+  border-bottom:1px solid rgba(0,0,0,0.1); 
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color:#333333;
+}
+.table_item text{
+  width: 20%;
+}

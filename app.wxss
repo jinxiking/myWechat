@@ -16,6 +16,22 @@ page {
   padding: 30rpx;
   font-size:30rpx;  
 }
+.cB1{
+  color:#00B1A2;
+}
 .mt30{
   margin-top: 30rpx;
+}
+.f26{
+  font-size: 26rpx!important;
+}
+.f23{
+  font-size: 23rpx!important;
+}
+.f62{
+  font-size: 62rpx!important;
+}
+.line_bg{
+  background: #F6F6F6;
+  height: 25rpx;
 }

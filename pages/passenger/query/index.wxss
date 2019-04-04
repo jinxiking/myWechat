@@ -39,6 +39,7 @@ page {
   position: relative;
   top:-60rpx;
   z-index: 9;
+  font-size: 23rpx;
 }
 .title{
   display: flex;
@@ -74,7 +75,7 @@ page {
 }
 .tab_cont{
   margin-top: 50rpx;
-  width: 180rpx;
+  width: 160rpx;
   display: flex;
   justify-content: flex-start;
   border:1px solid rgba(0,0,0,0.1);
@@ -82,11 +83,11 @@ page {
 }
 
 .tab_cont view{
-  width: 90rpx;
-  height: 60rpx;
+  width: 80rpx;
+  height: 50rpx;
   text-align: center;
-  line-height: 60rpx;
-  font-size: 30rpx;
+  line-height: 50rpx;
+  font-size: 25rpx;
 }
 .line_right{
   border-right:1px solid rgba(0,0,0,0.1);
@@ -148,13 +149,13 @@ page {
 
 .next_button{
   display: flex;
-  height: 80rpx;
+  height: 70rpx;
   background: #08B4A3;
   margin-top: 50rpx;
   color:#fff;
-  line-height: 80rpx;
-  font-size: 38rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
   justify-content: center;
-  width: 200rpx;
+  width: 250rpx;
   border-radius:40rpx;
 }

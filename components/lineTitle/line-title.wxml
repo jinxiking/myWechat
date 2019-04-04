@@ -1,0 +1,5 @@
+<!--components/lineTitle/line-title.wxml-->
+<view class='title'>
+  <view class='tips_line'></view>
+  <text class='title_text'>{{title}}</text>
+</view>

@@ -1,0 +1,31 @@
+<!--pages/home/activeLink/index.wxml-->
+
+<view class='mask'>
+  <view class='layer_content'>
+    <text class='title_text'>链接地址</text>
+    <image src='../../../public/imgs/home/active_link_bg.png' class='mask_bg' mode="widthFix"></image>
+    <view class='pozition_cont'>
+      <text class='url_link'>https://run.mockplus.cn/cFClhLpJLuFr6cPx/index.html</text>
+      <view class='tip_copy'>
+        <image src='../../../public/imgs/home/copy.png' class='mask_bg' mode="widthFix"></image>
+        <text>长按复制地址</text>
+
+        
+      </view>
+      <view class='code_cont'>
+        <view class='layer_code_img'>
+
+        </view>
+      </view>
+
+      <view class='tip_copy' style='margin-top:100rpx'>
+        <image src='../../../public/imgs/home/longtap.png' class='mask_bg' mode="widthFix"></image>
+        <text>长按保存高清源码</text>
+
+        
+      </view>
+    </view>
+    
+    <!-- <text class='mask_close'>关闭</text> -->
+  </view>
+</view>

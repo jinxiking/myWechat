@@ -1,5 +1,5 @@
 const app = getApp();
-
+console.log(app)
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -25,40 +25,45 @@ const ajax = (option) =>{
   wx.showLoading({
     title: '加载中',
   })
-  
+  let header = {
+    token: token
+  }
+  if (option.method == 'POST'){
+    header = {
+      token: token,
+      "Content-Type": "application/x-www-form-urlencoded"
+    }
+  }
   wx.request({
     url: app.globalData.url + option.url,
     data: option.data,
     method: option.method,
-    header : {
-      token: token
-    },
+    header: header,
     success : (res)=>{
       wx.hideLoading();
+      if (option.url == '/v1/user/info-add'){
+        option.success(res.data);
+        return;
+      }
       if (res.data.code == 200){
-      
+        
         option.success(res.data);
       } else if (res.data.code == 1001){
         //重新登录流程
         app.doLogin(ajax(option));
+      }else{
+        wx.showToast({
+          title: res.data.message,
+          icon: 'none',
+          duration: 2000
+        })
       }
     }
   })
 }
 
-const formatDate = (date = Date.now(), str = "YY-MM-DD") => {
-  const newDate = new Date(date);
-  str = str.replace("YY", newDate.getFullYear());
-  str = str.replace("MM", this.add0(newDate.getMonth() + 1));
-  str = str.replace("DD", this.add0(newDate.getDate()));
-  str = str.replace("hh", this.add0(newDate.getHours()));
-  str = str.replace("mm", this.add0(newDate.getMinutes()));
-  str = str.replace("ss", this.add0(newDate.getSeconds()));
-  return str
-},
 
 module.exports = {
   formatTime: formatTime,
   ajax: ajax,
-  formatDate : formatDate
 }

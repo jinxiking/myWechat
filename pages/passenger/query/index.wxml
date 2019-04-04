@@ -113,9 +113,12 @@
     </view>
     
     <view class='button_cont'>
-      <view class='next_button'>
-        查询
-      </view>
+      <navigator url="/pages/passenger/detail/index">
+        <view class='next_button'>
+          按日展示
+        </view>      
+      </navigator>
+
     </view>
 
     

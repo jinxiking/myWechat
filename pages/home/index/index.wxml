@@ -36,7 +36,7 @@
     >
     <block wx:for="{{bannerList}}" wx:for-item='item' wx:key="index">
       <swiper-item>
-        <image src='{{item.top_images}}' class='banner_img' mode="widthFix"></image>
+        <image src='{{item.top_images}}' class='banner_img' mode="widthFix" bindtap='toActive' id='{{item.ID}}'></image>
       </swiper-item>
     </block>
   </swiper>
@@ -87,9 +87,16 @@
   class='new_renwu' 
   >
     
-    <image src='../../../public/imgs/home/swiper.png' class='swiper_img'  mode="widthFix"></image>
-    <image src='../../../public/imgs/home/swiper.png' class='swiper_img'  mode="widthFix"></image>
-
+    <image 
+      wx:for='{{newList}}'
+      wx:key='index'
+      src='{{item.tb_top_picture}}' 
+      class='swiper_img'  
+      mode="widthFix"
+      id='{{item.ID}}'
+      >
+    </image>
+    
   </view>
 </view>
 
@@ -103,12 +110,13 @@
   </view>
 
   <view class='hot_content'>
-    <image src='../../../public/imgs/home/hot.png' class='hot_img'  mode="widthFix"></image>
-    <image src='../../../public/imgs/home/hot.png' class='hot_img'  mode="widthFix"></image>
-    <image src='../../../public/imgs/home/hot.png' class='hot_img'  mode="widthFix"></image>
-    <image src='../../../public/imgs/home/hot.png' class='hot_img'  mode="widthFix"></image>
-    <image src='../../../public/imgs/home/hot.png' class='hot_img'  mode="widthFix"></image>
-    <image src='../../../public/imgs/home/hot.png' class='hot_img'  mode="widthFix"></image>
+    <image 
+      wx:for='{{hotList}}'  
+      wx:key="index"
+      src='{{item.tb_square_picture}}' 
+      class='hot_img'  
+      mode="widthFix">
+    </image>
   </view>
 
  

@@ -1,0 +1,117 @@
+<!--pages/passenger/detail/index.wxml-->
+<view class='top_content'>
+  <view class='top_name'>
+    <view>
+      <text>388</text>
+      <text class='tip_text'>路过人数</text>
+    </view>
+    <view>
+      <text>388</text>
+      <text class='tip_text'>路过人数</text>
+    </view>
+    <view>
+      <text>388</text>
+      <text class='tip_text'>进店率%</text>
+    </view>
+  
+  </view>
+  <view class='top_name'>
+    <view>
+      <text>388</text>
+      <text class='tip_text'>路过人数</text>
+    </view>
+    <view>
+      <text>388</text>
+      <text class='tip_text'>路过人数</text>
+    </view>
+    <view>
+      <text>388</text>
+      <text class='tip_text'>进店率%</text>
+    </view>
+  
+  </view>
+
+  <view class='dro_cont'>
+    <text>当前门店：天宇通讯1店</text>
+  </view>
+
+  <view class='dro_cont f26' style='margin-top:20rpx!important;'>
+    <text>查询时间：2019-3-13</text>
+  </view>
+</view>
+
+<view class='list_cont'>
+  <line-title title='明细'></line-title>
+  <view class='table_title f23'>  
+    <text>时段</text>
+    <text>路过人数</text>
+    <text>到店人数</text>
+    <text>驻留顾客</text>
+    <text>驻留时长</text>
+  </view>
+
+  <view class='table_item f23'>  
+    <text>2019-3-13</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+  </view>
+
+    <view class='table_item f23'>  
+    <text>2019-3-13</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+  </view>
+    <view class='table_item f23'>  
+    <text>2019-3-13</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+  </view>
+    <view class='table_item f23'>  
+    <text>2019-3-13</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+  </view>
+    <view class='table_item f23'>  
+    <text>2019-3-13</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+  </view>
+    <view class='table_item f23'>  
+    <text>2019-3-13</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+  </view>
+    <view class='table_item f23'>  
+    <text>2019-3-13</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+  </view>
+    <view class='table_item f23'>  
+    <text>2019-3-13</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+  </view>
+    <view class='table_item f23'>  
+    <text>2019-3-13</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+    <text>18</text>
+  </view>
+</view>
