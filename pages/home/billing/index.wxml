@@ -1,4 +1,5 @@
 <!--pages/home/billing/index.wxml-->
+<wxs module="filter" src="../../../utils/public.wxs"></wxs>
 <view class='top_bg'>
 
 </view>
@@ -8,7 +9,7 @@
   <view class='top_card'>
     <view class='card_item'>
       <view class='cB1'>
-        <text class='num'>480</text>
+        <text class='num'>{{detail.finish_num}}</text>
         <text class='f26'>个</text>
       </view>
       <view style='margin-top:30rpx;'>
@@ -17,7 +18,7 @@
     </view>
     <view class='card_item'>
       <view class='cB1'>
-        <text class='num f62'>480</text>
+        <text class='num f62'>{{detail.balance_num}}</text>
         <text class='f26'>个</text>
       </view>
       <view style='margin-top:30rpx;'>
@@ -26,7 +27,7 @@
     </view>
     <view class='card_item'>
       <view class='cB1'>
-        <text class='num'>480</text>
+        <text class='num'>{{detail.balance_num}}</text>
         <text class='f26'>个</text>
       </view>
       <view style='margin-top:30rpx;'>
@@ -35,22 +36,22 @@
     </view>
   </view>
 
-  <view class='upTime f23'>更新时间：2019-3-16 15:03</view>
+  <view class='upTime f23'>更新时间：{{filter.formatDate(detail.u_time,"YY-MM-DD hh:mm")}}</view>
 </view>
 
 <view class='detail_dom'>
   <view class='task_detail'>
     <text class='task_name'>任务名称:</text>
-    <text class='task_val'>京东拉新</text>
-    <image src='../../../public/imgs/home/guanlian.png' class='icon' mode="widthFix"></image>
+    <text class='task_val'>{{detail.task_name}}</text>
+    <image src='../../../public/imgs/home/guanlian.png' class='icon' mode="widthFix" bindtap='topreviewPath'></image>
   </view>
   <view class='task_detail'>
     <text class='task_name'>结算价格:</text>
-    <text class='task_val'>京东拉新京东拉新京东拉新</text>
+    <text class='task_val'>{{detail.tb_task_balance}}</text>
   </view>
   <view class='task_detail'>
     <text class='task_name'>结算周期:</text>
-    <text class='task_val'>京东拉新京东拉新</text>
+    <text class='task_val'>{{detail.tb_task_cycle}}</text>
     <image src='../../../public/imgs/home/wenhao.png' class='icon' mode="widthFix"></image>
   </view>
 </view>
@@ -65,10 +66,10 @@
     <text>金额</text>
   </view>
 
-  <view class='table_item f23'>  
-    <text>2019-3-13</text>
-    <text class='click'>18</text>
-    <text>18</text>
+  <view class='table_item f23' wx:for='{{list}}' wx:key='{{index}}'>  
+    <text>{{item.report_day}}</text>
+    <text class='click' bindtap='toDayDetail' data-time='{{item.report_day}}' data-balance_num='{{item.balance_num}}' data-balance_amount='{{item.balance_amount}}'>{{item.balance_num}}</text>
+    <text>{{item.balance_amount}}</text>
   </view>
 
 </view>

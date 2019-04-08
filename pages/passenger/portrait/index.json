@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarTitleText": "画像分析",
+  "navigationBarTextStyle": "black",
+  "backgroundColor": "#f6f6f8",
+  "usingComponents": {
+    "ec-canvas": "../../../components/ec-canvas/ec-canvas"
+  }
+}

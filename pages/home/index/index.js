@@ -115,5 +115,11 @@ Page({
     wx.navigateTo({
       url: '/pages/home/activity/index?id=' + id,
     })
+  },
+  totask(e){
+    let id = e.currentTarget.id;
+    wx.navigateTo({
+      url: '/pages/home/task/index?id=' + id,
+    })
   }
 })

@@ -1,66 +1,70 @@
 // pages/home/task/index.js
+const util = require('../../../utils/util.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    showToast : false,
+    shopList : [],
+    task : {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    //获取门店
+    this.getShopList();
+    //获取任务详情
+    this.getTaskDetail(options.id);
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  getTaskDetail(id){
+    util.ajax({
+      url: '/v1/task/get-info',
+      method: 'GET',
+      data : {
+        task_id: id
+      },
+      success: (res) => {
+        this.setData({
+          task: res.data
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  getShopList(){
+    util.ajax({
+      url: '/v1/task/get-ShopTaskInfo',
+      method: 'GET',
+      success: (res) => {
+        this.setData({
+          shopList : res.data
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  apply(e){
+    let shopId = e.currentTarget.id;
+    util.ajax({
+      url: '/v1/task/task-apply',
+      method: 'POST',
+      data : {
+        task_id : this.data.task.ID,
+        shop_id: shopId,
+      },
+      success: (res) => {
+        this.setData({
+          showToast : true
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  closeDialog(){
+    this.setData({
+      showToast : false
+    })
+    this.onLoad();
   }
 })

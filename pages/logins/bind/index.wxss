@@ -52,6 +52,7 @@ page {
 .input_item{
   display: flex;
   margin-top:30rpx;
+  position: relative;
 }
 .input_text{
   height: 50rpx;
@@ -108,4 +109,17 @@ page {
   justify-content: center;
   width: 200rpx;
   border-radius:40rpx;
+}
+
+.sendCode{
+  font-size: 25rpx;
+  position: absolute;
+  color:rgba(0,0,0,0.5);
+  right: 0;
+  top:10rpx;
+  z-index: 10;
+}
+
+.canSend{
+  color:#00B1A2;
 }

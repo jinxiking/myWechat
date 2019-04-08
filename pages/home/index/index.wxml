@@ -4,24 +4,27 @@
     url="/pages/home/myActivyList/index"
   >
     <view class='nav_content' bindtap='' href=''>
-      <image src='../../../public/imgs/home/nav_1.png' class='nav_img'></image>
-      <text class='nav_text'>任务</text>
+      <view><image src='../../../public/imgs/home/nav_1.png' class='nav_img'></image></view>
+      
+      <text class='nav_text'>我的任务</text>
     </view> 
   </navigator>
   <navigator
     url="/pages/home/myActivyList/index"
   >
     <view class='nav_content'>
-      <image src='../../../public/imgs/home/nav_2.png' class='nav_img'></image>
-      <text class='nav_text'>客流</text>
+      <view><image src='../../../public/imgs/home/nav_2.png' class='nav_img'></image></view>
+      
+      <text class='nav_text'>客流画像</text>
     </view>
   </navigator>
   <navigator
     url="/pages/home/myActivyList/index"
   >
     <view class='nav_content'>
-      <image src='../../../public/imgs/home/nav_3.png' class='nav_img'></image>
-      <text class='nav_text'>设备</text>
+      <view><image src='../../../public/imgs/home/nav_3.png' class='nav_img'></image></view>
+      
+      <text class='nav_text'>店铺设备</text>
     </view>
   </navigator>
 </view>
@@ -94,6 +97,7 @@
       class='swiper_img'  
       mode="widthFix"
       id='{{item.ID}}'
+      bindtap='totask'
       >
     </image>
     
@@ -115,7 +119,9 @@
       wx:key="index"
       src='{{item.tb_square_picture}}' 
       class='hot_img'  
-      mode="widthFix">
+      mode="widthFix"
+      bindtap='totask'
+      >
     </image>
   </view>
 

@@ -78,7 +78,6 @@ Page({
       success : ()=>{
         
         this.doInterval();
-        console.log(12)
       }
     })
   },
@@ -135,7 +134,11 @@ Page({
           //扫码绑定流程
           wx.scanCode({
             success: (res)=>{
+              // res.result
               console.log(res);
+              wx.navigateTo({
+                url: '/pages/logins/bind/index?code=' + res.result,
+              })
             }
           })
         } else {

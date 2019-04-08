@@ -1,69 +1,27 @@
 <!--pages/home/myActivyList/index.wxml-->
 <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex"  class='tab_cont'>
 <!--  display: inline-block-->
-  <view class='tap_item active'>天珠烟罗沙</view>
-  <view class='tap_item'>天意宁武县</view>
-  <view class='tap_item'>天国旧州镇</view>
-  <view class='tap_item'>天珠烟罗沙</view>
-  <view class='tap_item'>天意宁武县</view>
-  <view class='tap_item'>天国旧州镇</view>
-  <view class='tap_item'>天珠烟罗沙</view>
-  <view class='tap_item'>天意宁武县</view>
-  <view class='tap_item'>天国旧州镇</view>
+  <view wx:for='{{shopList}}' wx:key='{{index}}' id='{{index}}' class='tap_item {{current == index?"active":""}}' bindtap='changTab'>{{item.name}}</view>
 </scroll-view>
 
 
 <view class='list_content'>
-  <view class="list_item"> 
-    <image src='../../../public/imgs/home/banner.png' class='list_img' mode="widthFix"></image>
-    <view class='show_code'>
+  <view class="list_item" wx:for='{{activeList}}' wx:key='{{index}}'> 
+    <image src='{{item.tb_my_picture}}' class='list_img' mode="widthFix" bindtap='toBilling' id='{{item.ID}}'></image>
+    <view class='show_code' bindtap='showCode' id='{{index}}'>
       <text>快速显码</text>
       <image src='../../../public/imgs/code.png' class='code_img' mode="widthFix"></image>
-      
-    </view>
-  </view>
-
-  <view class="list_item"> 
-    <image src='../../../public/imgs/home/banner.png' class='list_img' mode="widthFix"></image>
-    <view class='show_code'>
-      <text>快速显码</text>
-      <image src='../../../public/imgs/code.png' class='code_img' mode="widthFix"></image>
-      
-    </view>
-  </view>
-  <view class="list_item"> 
-    <image src='../../../public/imgs/home/banner.png' class='list_img' mode="widthFix"></image>
-    <view class='show_code'>
-      <text>快速显码</text>
-      <image src='../../../public/imgs/code.png' class='code_img' mode="widthFix"></image>
-      
-    </view>
-  </view>
-  <view class="list_item"> 
-    <image src='../../../public/imgs/activeList.jpeg' class='list_img' mode="widthFix"></image>
-    <view class='show_code'>
-      <text>快速显码</text>
-      <image src='../../../public/imgs/code.png' class='code_img' mode="widthFix"></image>
-      
-    </view>
-  </view>
-    <view class="list_item"> 
-    <image src='../../../public/imgs/home/banner.png' class='list_img' mode="widthFix"></image>
-    <view class='show_code'>
-      <text>快速显码</text>
-      <image src='../../../public/imgs/code.png' class='code_img' mode="widthFix"></image>
-      
     </view>
   </view>
 
 </view>
 
-<view class='mask'>
+<view class='mask' wx:if='{{showDialog}}'>
   <view class='layer_content'>
     <image src='../../../public/imgs/codeBg.png' class='mask_bg' mode="widthFix"></image>
     <view class='layer_code_img'>
-
+      <image src='{{codePath}}' class='codeCimg'></image>
     </view>
-    <text class='mask_close'>关闭</text>
+    <text class='mask_close' bindtap='closeDialog'>关闭</text>
   </view>
 </view>

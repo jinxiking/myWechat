@@ -1,66 +1,68 @@
 // pages/home/billing/index.js
+const util = require('../../../utils/util.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    detail : {},
+    lsit : [],
+    // 关系ID
+    id : ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
+    this.getDetail(options.id);
+    this.getList(options.id);
+    this.setData({
+      id: options.id
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  getDetail(id,shopId){
+    util.ajax({
+      url: '/v1/task/get-shopTaskBalance',
+      method: 'GET',
+      data : {
+        id : id || 1,
+      },
+      success: (res) => {
+        this.setData({
+          detail : res.data
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  getList(id){
+    util.ajax({
+      url: '/v1/task/get-shopTaskBalanceDay',
+      method: 'GET',
+      data: {
+        id : id || 1,
+      },
+      success: (res) => {
+        this.setData({
+          list: res.data
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  toDayDetail(e){
+    let time = e.currentTarget.dataset.time;
+    let balance_amount = e.currentTarget.dataset.balance_amount;
+    let balance_num = e.currentTarget.dataset.balance_num;
+    wx.navigateTo({
+      url: '/pages/home/BillingDetail/index?time=' + time + '&id=' + this.data.id + '&balance_amount=' + balance_amount + '&balance_num=' + balance_num,
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  topreviewPath(){
+    wx.navigateTo({
+      url: '/pages/home/activeLink/index?id=' + this.data.id,
+    })
   }
 })

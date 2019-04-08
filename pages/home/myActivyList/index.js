@@ -1,66 +1,79 @@
 // pages/home/myActivyList/index.js
+const util = require('../../../utils/util.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    shopList : [],
+    current : 0,
+    showDialog : false,
+    activeList : [],
+    codePath : ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getShopList();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
+  getShopList(){
+    util.ajax({
+      url: '/v1/shop/shop-list',
+      method: 'GET',
+      success: (res) => {
+        this.setData({
+          shopList: res.data
+        })
+        if (res.data.length != 0){
+          this.getActiveList(res.data[0].ID)
+        }
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  changTab(e){
+    let id = e.currentTarget.id;
+    this.setData({
+      current: id
+    })
+    this.getActiveList(this.data.shopList[id].ID);
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  getActiveList(shopId){
+    util.ajax({
+      url: '/v1/task/get-mylist',
+      method: 'GET',
+      data : {
+        shop_id: shopId
+      },
+      success: (res) => {
+        this.setData({
+          activeList: res.data
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  toBilling(e){
+    let id = e.currentTarget.id;
+    wx.navigateTo({
+      url: '/pages/home/billing/index?id=' + id + '&shopId=' + this.data.shopList[this.data.current].ID,
+    })
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  showCode(e){
+    let id = e.currentTarget.id;
+    this.setData({
+      codePath: this.data.activeList[id].path_code,
+      showDialog : true
+    })
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  closeDialog(){
+    this.setData({
+      showDialog: false
+    })
   }
 })

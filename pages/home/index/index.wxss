@@ -13,6 +13,10 @@
   color:#fff;
   font-size: 25rpx;
 }
+.nav_content view{
+  display: flex;
+  justify-content: center;
+}
 
 .nav_img{
   width: 50rpx;

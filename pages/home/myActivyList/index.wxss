@@ -90,3 +90,7 @@
   width: 355rpx;
   height: 355rpx;
 }
+.codeCimg{
+  width: 100%;
+  height: 100%;
+}

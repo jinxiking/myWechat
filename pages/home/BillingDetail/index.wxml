@@ -1,12 +1,12 @@
 <!--pages/home/BillingDetail/index.wxml-->
 <view class='detail_item position'>
   <view class='time_item'>
-    2019-3-15
+    {{time}}
   </view>
 
   <view class='item_num'>
-    <text>数量：18</text>
-    <text>金额：250</text>
+    <text>数量：{{balance_num}}</text>
+    <text>金额：{{balance_amount}}</text>
   </view>
 </view>
 
@@ -15,50 +15,18 @@
   <text>备注</text>
 </view>
 
-<view class='detail_item'>
+<view class='detail_item' wx:for='{{list}}' wx:key='index'>
   <view class='item_num'>
-    <text style='color:#333'>13734256790</text>
-    <text style='font-size:19rpx;'>2019-3-15 16:05</text>
+    <text style='color:#333'>{{item.balance_only}}</text>
+    <text style='font-size:19rpx;'>{{item.report_day}}</text>
 
   </view>
 
   <view class='item_num_bottom'>
-    <view>sdadsadads18asdasdadasdasdasdasdasdasdadadasdasdad</view>
-  </view>
-</view>
-<view class='detail_item'>
-  <view class='item_num'>
-    <text style='color:#333'>13734256790</text>
-    <text style='font-size:19rpx;'>2019-3-15 16:05</text>
-
-  </view>
-
-  <view class='item_num_bottom'>
-    <view>sdadsadads18asdasdadasdasdasdasdasdasdadadasdasdad</view>
+    <view>{{item.balance_remark}}</view>
   </view>
 </view>
 
-<view class='detail_item'>
-  <view class='item_num'>
-    <text style='color:#333'>13734256790</text>
-    <text style='font-size:19rpx;'>2019-3-15 16:05</text>
 
-  </view>
 
-  <view class='item_num_bottom'>
-    <view>sdadsadads18asdasdadasdasdasdasdasdasdadadasdasdad</view>
-  </view>
-</view>
-
-<view class='detail_item'>
-  <view class='item_num'>
-    <text style='color:#333'>13734256790</text>
-    <text style='font-size:19rpx;'>2019-3-15 16:05</text>
-
-  </view>
-
-  <view class='item_num_bottom'>
-    <view>sdadsadads18asdasdadasdasdasdasdasdasdadadasdasdad</view>
-  </view>
-</view>
 

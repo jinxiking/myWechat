@@ -5,7 +5,7 @@
     <text class='title_text'>链接地址</text>
     <image src='../../../public/imgs/home/active_link_bg.png' class='mask_bg' mode="widthFix"></image>
     <view class='pozition_cont'>
-      <text class='url_link'>https://run.mockplus.cn/cFClhLpJLuFr6cPx/index.html</text>
+      <text selectable='true' class='url_link' bindlongpress='copy'>{{detail.path_code}}</text>
       <view class='tip_copy'>
         <image src='../../../public/imgs/home/copy.png' class='mask_bg' mode="widthFix"></image>
         <text>长按复制地址</text>
@@ -14,7 +14,7 @@
       </view>
       <view class='code_cont'>
         <view class='layer_code_img'>
-
+           <image src='{{detail.path_code}}' style='width:100%;height:100%;'></image>
         </view>
       </view>
 
