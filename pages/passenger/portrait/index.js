@@ -1,5 +1,5 @@
 import * as echarts from '../../../components/ec-canvas/echarts';
-
+const util = require('../../../utils/util.js');
 const app = getApp();
 
 let chart = null;
@@ -75,9 +75,34 @@ Page({
   data: {
     ec: {
       onInit: initChart
-    }
+    },
+    shopList : ['基本信息','教育职业','消费力'],
+    current : 0,
+    shopListReal : [],
+    shopListRealArr : [],
+    shopIndex : 0,
+    searchDateStart : '',
+    searchDateEnd: '',
   },
-
+  onLoad(){
+    this.getShopList();
+  },
+  getShopList(){
+    util.ajax({
+      url: '/v1/shop/shop-list',
+      method: 'GET',
+      success: (res) => {
+        let arr = [];
+        for(var i in res.data){
+          arr.push(res.data[i].name)
+        }
+        this.setData({
+          shopListReal: res.data,
+          shopListRealArr: arr
+        })
+      }
+    })
+  },
   onReady() {
     setTimeout(function () {
       // 获取 chart 实例的方式
@@ -86,6 +111,25 @@ Page({
       chart.setOption(option,true);
     }, 2000);
   },
-
-
+  changTab(e) {
+    let id = e.currentTarget.id;
+    this.setData({
+      current: id
+    })
+  },
+  bindShopPicker(e){
+    this.setData({
+      shopIndex: e.detail.value
+    })
+  },
+  bindStartDate(e){
+    this.setData({
+      searchDateStart : e.detail.value
+    })
+  },
+  bindEndDate(e){
+    this.setData({
+      searchDateEnd: e.detail.value
+    })
+  }
 });

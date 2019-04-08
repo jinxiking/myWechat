@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/passenger/portrait/index",
+    "pages/logins/login/index",
     "pages/home/index/index",
     "pages/home/myActivyList/index",
     "pages/logins/bind/index",
-    "pages/logins/login/index",
     "pages/home/billing/index",
     "pages/passenger/detail/index",
     "pages/passenger/query/index",

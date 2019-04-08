@@ -4,7 +4,6 @@
   <view wx:for='{{shopList}}' wx:key='{{index}}' id='{{index}}' class='tap_item {{current == index?"active":""}}' bindtap='changTab'>{{item.name}}</view>
 </scroll-view>
 
-
 <view class='list_content'>
   <view class="list_item" wx:for='{{activeList}}' wx:key='{{index}}'> 
     <image src='{{item.tb_my_picture}}' class='list_img' mode="widthFix" bindtap='toBilling' id='{{item.ID}}'></image>
@@ -13,7 +12,6 @@
       <image src='../../../public/imgs/code.png' class='code_img' mode="widthFix"></image>
     </view>
   </view>
-
 </view>
 
 <view class='mask' wx:if='{{showDialog}}'>

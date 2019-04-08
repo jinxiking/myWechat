@@ -1,34 +1,28 @@
 <!--pages/passenger/portrait/index.wxml-->
 <!-- 画像分析页面 -->
 <view class='contentP'>
+  <view class='type'>
+    <view class='type_cont'>
+      <view class='active_nav borderR' bindtap='changType' data-type='0'>客流分析</view>
+      <view bindtap='changType' data-type='0'>画像分析</view>
+    </view>
+  </view>
   <view class='card'>
     <view class='card_title'>
-      <text>当前门店：天信通讯X店</text>
+      <picker bindchange="bindShopPicker" value="{{shopIndex}}" range="{{shopListRealArr}}" class='shopPiker'>
+        <view class="shopPiker">
+          当前门店：{{shopListRealArr[shopIndex]}}
+          <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"      style='margin-left:5px'></image>
+        </view>
+      </picker>
     </view>
 
-      <view class='input_item'>
+      <view class='input_item' style='margin-top:50rpx;'>
         <text class='input_text'>开始时间</text>
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <picker bindchange="bindStartDate" value="{{searchDateStart}}"  mode="date">
           <view class="picker">
-            {{array[index]}}
-            <view class='row_down'>
-              <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
-            </view>
-          </view>
-        </picker>
-
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-          <view class="picker">
-            {{array[index]}}
-            <view class='row_down'>
-              <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
-            </view>
-          </view>
-        </picker>
-
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-          <view class="picker">
-            {{array[index]}}
+            <text wx:if='{{searchDateStart == ""}}'>请选择开始时间</text>
+            <text wx:else='{{searchDateStart != ""}}'>{{searchDateStart}}</text>
             <view class='row_down'>
               <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
             </view>
@@ -37,27 +31,10 @@
       </view>
       <view class='input_item'>
         <text class='input_text'>结束时间</text>
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <picker bindchange="bindEndDate" value="{{searchDateEnd}}" mode="date">
           <view class="picker">
-            {{array[index]}}
-            <view class='row_down'>
-              <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
-            </view>
-          </view>
-        </picker>
-
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-          <view class="picker">
-            {{array[index]}}
-            <view class='row_down'>
-              <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
-            </view>
-          </view>
-        </picker>
-
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-          <view class="picker">
-            {{array[index]}}
+            <text wx:if='{{searchDateEnd == ""}}'>请选择结束时间</text>
+            <text wx:else='{{searchDateEnd != ""}}'>{{searchDateEnd}}</text>
             <view class='row_down'>
               <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
             </view>
@@ -75,14 +52,29 @@
 
 
 
-  <view class='card' style='margin-top50rpx;'>
-    <view class='card_title'>
-      <text>当前门店：天信通讯X店</text>
+  <view class='card' style='margin-top:50rpx;'>
+    <view class='card_title bgb'>
+      <text>查询结果</text>
+    </view>
+    <view class='tab_cont'>
+        <view wx:for='{{shopList}}' wx:key='{{index}}' id='{{index}}' class='tap_item {{current == index?"active":""}}' bindtap='changTab'>{{item}}</view>    
     </view>
 
+
+    <view class='nav_cont'>
+      <view class='navs'>
+        <view class='nav first active_nav'>职业分布</view>
+        <view class='nav'>职业分布</view>
+        <view class='nav end'>职业分布</view>
+      </view>
+    </view>
+
+    
     <view class="chat_content">
       <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}" bind:init="echartInit"></ec-canvas>
     </view> 
+
+
     
   </view>
 

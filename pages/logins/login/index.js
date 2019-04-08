@@ -14,9 +14,8 @@ Page({
     choseRadio : 0,
     vcode :'',
     radio: '../../../public/imgs/chose.png',
-    radio1:'../../../public/imgs/nochose.png'
+    radio1:'../../../public/imgs/nochose.png',
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -58,7 +57,7 @@ Page({
     })
   },
   sendCode(){
-    if (this.data.tel.length == 0 || timeFlag){
+    if (this.data.tel.length < 11 || timeFlag){
       return;
     }
     if (!this.vetifyTel(this.data.tel)){

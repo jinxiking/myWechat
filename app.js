@@ -6,7 +6,8 @@ App({
     // 登录
     if (token) {
       this.globalData.token = token;
-      this.getUserInfo(token)
+      this.getUserInfo(token);
+      
       // wx.redirectTo({
       //   url: '/pages/home/index/index',
       // })
