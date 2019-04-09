@@ -73,6 +73,7 @@ Page({
     }
   },
   data: {
+    type : '1',
     ec: {
       onInit: initChart
     },
@@ -130,6 +131,13 @@ Page({
   bindEndDate(e){
     this.setData({
       searchDateEnd: e.detail.value
+    })
+  },
+  changType(e){
+   
+    let index = e.currentTarget.dataset.type
+    this.setData({
+      type : index
     })
   }
 });

@@ -3,8 +3,8 @@
 <view class='contentP'>
   <view class='type'>
     <view class='type_cont'>
-      <view class='active_nav borderR' bindtap='changType' data-type='0'>客流分析</view>
-      <view bindtap='changType' data-type='0'>画像分析</view>
+      <view class='borderR {{type ==0?"active_nav":""}}' bindtap='changType' data-type='0'>客流分析</view>
+      <view class='{{type ==1?"active_nav":""}}' bindtap='changType' data-type='1'>画像分析</view>
     </view>
   </view>
   <view class='card'>
