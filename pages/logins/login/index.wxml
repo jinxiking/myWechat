@@ -15,7 +15,7 @@
     <input class='code'  placeholder='请输入验证码' maxlength='6' value='{{vcode}}' bindinput="bindcodeInput"></input>
   </view>
 
-  <view class='choseBind'>
+  <!-- <view class='choseBind'>
     <view class='radio_content' bindtap='choseRadio' id='radio0'>
       <image src='{{radio}}' class='imgs'></image>
       <text class='radio_label'>我有设备</text>
@@ -25,7 +25,7 @@
       <image src='{{radio1}}' class='imgs'></image>
       <text class='radio_label'>暂无设备</text>
     </view>
-  </view>  
+  </view>   -->
 
   <view class='mybutton {{vcode?"canSubmit":""}}' bindtap='submit'>登录</view>  
 

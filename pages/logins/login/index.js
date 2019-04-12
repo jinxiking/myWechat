@@ -11,7 +11,7 @@ Page({
   data: {
     tel : '',
     number : 0,
-    choseRadio : 0,
+    choseRadio : 1,
     vcode :'',
     radio: '../../../public/imgs/chose.png',
     radio1:'../../../public/imgs/nochose.png',
@@ -36,7 +36,7 @@ Page({
         clearInterval(interval);
         timeFlag = false;
       }
-    },100)
+    },1000)
   },
   vetifyTel(tel){
     let reg = /^\d{11}$/;
@@ -142,7 +142,7 @@ Page({
           })
         } else {
           //无设备做手机号绑定直接进入首页
-          wx.navigateTo({
+          wx.redirectTo({
             url: '/pages/home/index/index',
           })
         }

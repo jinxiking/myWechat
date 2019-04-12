@@ -9,9 +9,9 @@ App({
       this.globalData.token = token;
       this.getUserInfo(token);
       
-      // wx.redirectTo({
-      //   url: '/pages/home/index/index',
-      // })
+      wx.redirectTo({
+        url: '/pages/home/index/index',
+      })
     } else {
       this.doLogin();
     }

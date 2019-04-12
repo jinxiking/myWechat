@@ -1,5 +1,5 @@
 <!--pages/home/index/index.wxml-->
-<view class='top'>
+<!-- <view class='top'>
   <navigator
     url="/pages/home/myActivyList/index"
   >
@@ -27,7 +27,7 @@
       <text class='nav_text'>店铺设备</text>
     </view>
   </navigator>
-</view>
+</view> -->
 
 <view class='banner_content'>
   <swiper
