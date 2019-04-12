@@ -42,7 +42,7 @@ Page({
       url: '/v1/device/get-device',
       method: 'GET',
       data: {
-        mac: this.code,
+        mac: this.data.code,
       },
       success: (res) => {
         this.setData({
@@ -238,7 +238,7 @@ Page({
     let params = {
       mobile : this.data.tel,
       shop_name : this.data.shopName,
-      shop_type_id: this.data.shopIndex,
+      shop_type_id: this.data.shopTypeList[this.data.shopIndex].ID,
       shop_province_id : this.data.regionCode[0],
       shop_city_id: this.data.regionCode[1],
       shop_district_id: this.data.regionCode[2],

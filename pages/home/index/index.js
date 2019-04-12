@@ -95,7 +95,7 @@ Page({
   },
   getBanner(){
     util.ajax({
-      url: '/v1/banner/get-banner',
+      url: '/v1/banner/get-list',
       method: 'GET',
       success: (res) => {
         this.setData({

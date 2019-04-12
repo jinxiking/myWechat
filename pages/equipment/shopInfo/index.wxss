@@ -1,0 +1,62 @@
+/* pages/logins/bind/index.wxss */
+.top{
+  height: 50px;
+  line-height: 50rpx;
+  display: flex;
+  justify-content: flex-end;
+  color:#00B1A2;
+  font-size: 30rpx;
+}
+.input_item{
+  display: flex;
+  position: relative;
+  font-size: 30rpx;
+  color:#999999;
+  margin-bottom: 70rpx;
+}
+.input_text{
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 20%;
+}
+.input{
+  width: 80%;
+  color:#333333;
+  margin-left:20rpx;
+  border-bottom:1px solid rgba(0,0,0,0.1); 
+}
+
+.picker{
+  padding: 10rpx;
+  border:1px solid rgba(0,0,0,0.1);
+  margin-left: 20rpx;
+  padding-right:80rpx; 
+  padding-left:20rpx; 
+  position: relative;
+  border-radius:5rpx; 
+  color:#333333;
+}
+
+.row_down{
+  border-left:1px solid  rgba(0,0,0,0.1); 
+  height: 100%;
+  position: absolute;
+  /* right: 50rpx; */
+  right: 0;
+  width: 50rpx;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select_imgs{
+  width: 20rpx;
+}
+
+.button_cont{
+  display: flex;
+  justify-content: center;
+  margin-top: 30rpx;
+}
+

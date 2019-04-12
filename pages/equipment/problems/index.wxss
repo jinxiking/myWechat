@@ -1,0 +1,30 @@
+/* pages/equipment/problems/index.wxss */
+.list_item{
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left:30rpx;
+  padding-right: 20rpx; 
+  font-size: 30rpx;
+  color:#333333;
+}
+.row{
+  width: 20rpx;
+  margin-top: 25rpx;
+}
+.row_down{
+  width: 30rpx;
+  margin-top: 33rpx;
+}
+.problem{
+  border-bottom:1px solid rgba(0,0,0,0.1);
+}
+.content_dro{
+  padding: 30rpx;
+  color:#666666;
+  font-size: 26rpx;
+}
+.active{
+  color:#00B1A2!important;
+}

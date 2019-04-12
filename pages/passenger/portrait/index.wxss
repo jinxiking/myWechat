@@ -12,6 +12,13 @@
   font-size: 26rpx;
   padding-left:20rpx; 
   border-bottom:1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+.select_imgs_left{
+  width: 15rpx;
+  position: relative;
+  top:3rpx;
 }
 .bgb{
   background: #00B1A2;
@@ -165,4 +172,37 @@ ec-canvas {
 }
 .shopPiker{
   border: none;
+}
+
+
+.top_content{
+  color:#fff;
+  padding-bottom:20rpx;
+  position: relative;
+  z-index: 8;
+}
+.top_name{
+  margin-top: 50rpx;
+  font-size: 50rpx;
+  color:#00B1A2;
+  display: flex;
+  justify-content: space-around;
+}
+.tip_text{
+  font-size: 25rpx;
+  color:#333333;
+}
+.top_name view{
+  display: flex;
+  flex-direction: column;
+}
+.top_name view text{
+  text-align: center; 
+}
+.top_tips{
+  font-size: 25rpx;
+}
+.nav_p{
+  padding-left:30rpx;
+  padding-right:30rpx;
 }

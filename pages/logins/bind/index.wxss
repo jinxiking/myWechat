@@ -116,7 +116,7 @@ page {
   position: absolute;
   color:rgba(0,0,0,0.5);
   right: 0;
-  top:10rpx;
+  top:6rpx;
   z-index: 10;
 }
 

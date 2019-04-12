@@ -10,7 +10,12 @@ Page({
     current : 0,
     showDialog : false,
     activeList : [],
-    codePath : ''
+    codePath : '',
+    page : {
+      page : 1,
+      pageSize : 10
+    },
+    finish : false
   },
 
   /**
@@ -49,14 +54,22 @@ Page({
       url: '/v1/task/get-mylist',
       method: 'GET',
       data : {
-        shop_id: shopId
+        shop_id: shopId,
+        page : 1,
+        pageSize : 10
       },
       success: (res) => {
         this.setData({
           activeList: res.data
         })
+        if (res.data.pageData.macPage == 0 || res.data.pageData.macPage == this.data.page.page) {
+          this.setData({
+            finish: true
+          })
+        }
       }
     })
+    
   },
   toBilling(e){
     let id = e.currentTarget.id;

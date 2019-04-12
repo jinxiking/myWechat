@@ -1,7 +1,7 @@
 {
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#00B1A2",
-  "navigationBarTitleText": "画像分析",
+  "navigationBarTitleText": "客流画像",
   "navigationBarTextStyle": "white",
   "backgroundColor": "#f6f6f8",
   "usingComponents": {

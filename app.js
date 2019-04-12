@@ -3,6 +3,7 @@ App({
   onLaunch: function () {
     // 展示本地存储能力
     var token = wx.getStorageSync('token') || '';
+    // var token = '99887766'
     // 登录
     if (token) {
       this.globalData.token = token;
@@ -29,7 +30,7 @@ App({
       }
     })
   },
-  doLogin: function (done) {
+  doLogin: function (done,option) {
     let _this = this;
     wx.login({
       success: res => {
@@ -46,7 +47,7 @@ App({
             wx.setStorageSync('token', token);
             _this.globalData.token = token;
             _this.getUserInfo(token);
-            if (done) done()
+            if (done) done(option)
           } 
         })
       }

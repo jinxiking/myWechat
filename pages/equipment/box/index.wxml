@@ -1,0 +1,50 @@
+<!--pages/equipment/box/index.wxml-->
+<view class='contentP'>
+  <view class='card'>
+    <view class='item'>
+      <text class='title'>当前设备：</text>
+      <text class='name'>智K盒</text>
+      <text class='mac'>00：00：00：00：00</text>
+      <text class='copy'>复制</text>
+    </view>
+    <view class='item'>
+      <text class='title'>关联门店：</text>
+      <text class='name'>天域通讯1点</text>
+    </view>
+    <view class='item'>
+      <text class='title'>门店类型：</text>
+      <text class='name'>美容美发</text>
+    </view>
+    <view class='item'>
+      <text class='title'>门店地区：</text>
+      <text class='name'>北京市朝阳区百子湾</text>
+    </view>
+    <view class='item'>
+      <text class='title'>门店地址：</text>
+      <text class='name'>百子湾家园B区</text>
+    </view>
+    <view class='top'>
+      <text>保存</text>
+    </view>
+  
+    <view class='input_item'>
+      <text class='input_text' style='width:35%;'>过客半径（米）:</text>
+      <input class='code'  placeholder='请输入过客半径' class='input' value='{{Gradius}}' bindinput="bindGradiusInput"></input>
+    </view>
+
+    <view class='input_item'>
+      <text class='input_text' style='width:35%;'>进店半径（米）:</text>
+      <input class='code'  placeholder='请输入进店半径' class='input' value='{{Jradius}}' bindinput="bindJradiusInput"></input>
+    </view>
+
+    <view class='input_item'>
+      <text class='input_text' style='width:42%;'>驻店时长（分钟）:</text>
+      <input class='code'  placeholder='请输入驻店时长' class='input' value='{{time}}' bindinput="timeInput"></input>
+    </view>
+
+
+    <view class='button_cont'>
+      <view class='unbindBtn'>解绑设备</view>
+    </view> 
+  </view>
+</view>

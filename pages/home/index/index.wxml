@@ -10,7 +10,7 @@
     </view> 
   </navigator>
   <navigator
-    url="/pages/home/myActivyList/index"
+    url="/pages/passenger/portrait/index"
   >
     <view class='nav_content'>
       <view><image src='../../../public/imgs/home/nav_2.png' class='nav_img'></image></view>
@@ -19,7 +19,7 @@
     </view>
   </navigator>
   <navigator
-    url="/pages/home/myActivyList/index"
+    url="/pages/equipment/index/index"
   >
     <view class='nav_content'>
       <view><image src='../../../public/imgs/home/nav_3.png' class='nav_img'></image></view>

@@ -1,0 +1,23 @@
+<!--pages/equipment/problems/index.wxml-->
+<view class='contentP'>
+  <view class='problem active'>
+    <view class='list_item active'>
+      <text>问题2</text>
+      <!-- <image src='../../../public/imgs/home/row.png' class='row' mode="widthFix"></image> -->
+      <image src='../../../public/imgs/home/row_down.png' class='row_down' mode="widthFix"></image>
+    </view>
+    <view class='content_dro'>一个手机号至多绑定5个设备。包括智k盒、智k屏及未来看一下科技自主或合作所推出的产品，均记为一个设备。即：一个手机号可以绑定至多5个智k盒，或3个智k盒+2个智k屏。</view>
+  </view>
+  <view class='list_item problem'>
+    <text>问题2</text>
+    <image src='../../../public/imgs/home/row.png' class='row' mode="widthFix"></image>
+  </view>
+  <view class='list_item problem'>
+    <text>问题2</text>
+    <image src='../../../public/imgs/home/row.png' class='row' mode="widthFix"></image>
+  </view>
+  <view class='list_item problem'>
+    <text>问题2</text>
+    <image src='../../../public/imgs/home/row.png' class='row' mode="widthFix"></image>
+  </view>
+</view> 

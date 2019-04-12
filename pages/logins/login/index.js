@@ -36,7 +36,7 @@ Page({
         clearInterval(interval);
         timeFlag = false;
       }
-    },1000)
+    },100)
   },
   vetifyTel(tel){
     let reg = /^\d{11}$/;

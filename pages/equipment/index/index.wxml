@@ -1,0 +1,71 @@
+<!--pages/equipment/index/index.wxml-->
+<view class='contentP'>
+  <view class='shopItem'>
+    <view class='shopName'>天域通讯1店</view>
+    <image src='../../../public/imgs/equipment/shopBg.png' class='shop_bg' mode="widthFix"></image>
+  </view>
+
+  <view class='shopItem active'>
+    <view class='shopName'>天域通讯1店
+      <image src='../../../public/imgs/equipment/edit.png' class='edit' mode="widthFix" bindtap='toShop'></image>
+    </view>
+    <image src='../../../public/imgs/equipment/shopBg.png' class='shop_bg' mode="widthFix"></image>
+
+    <image src='../../../public/imgs/equipment/link.png' class='link' mode="widthFix"></image>
+
+    <view class='list_cont'>
+      <view class='list_item' bindtap='toZhiDetail'>
+        <text>智K盒</text>
+        <image src='../../../public/imgs/home/row.png' class='row' mode="widthFix"></image>
+      </view>
+      <view class='list_item'>
+        <text>智K盒</text>
+        <image src='../../../public/imgs/home/row.png' class='row' mode="widthFix"></image>
+      </view>
+      <view class='list_item'>
+        <text>智K盒</text>
+        <image src='../../../public/imgs/home/row.png' class='row' mode="widthFix"></image>
+      </view>
+      <view class='list_item'>
+        <text>智K盒</text>
+        <image src='../../../public/imgs/home/row.png' class='row' mode="widthFix"></image>
+      </view>
+      <view class='list_item'>
+        <text>智K盒</text>
+        <image src='../../../public/imgs/home/row.png' class='row' mode="widthFix"></image>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='card'>
+    <view class='card_title'>
+      <text>常见问题</text>
+      <text class='more' bindtap='toAll'>全部</text>
+    </view>
+
+    <view class='list_item problem'>
+      <text>问题1</text>
+      <image src='../../../public/imgs/home/row.png' class='row' mode="widthFix"></image>
+    </view>
+    <view class='list_item problem'>
+      <text>问题2</text>
+      <image src='../../../public/imgs/home/row.png' class='row' mode="widthFix"></image>
+    </view>
+  </view>
+
+  <view class='card'>
+    <view class='card_title'>
+      <text>联系客服</text>
+    </view>
+
+    <view class='list_item problem'>
+      <text>电话：010-86467161（09:00-19:00）</text>
+      <image src='../../../public/imgs/equipment/tel.png' class='tel' mode="widthFix"></image>
+    </view>
+    <view class='list_item problem'>
+      <text>邮箱：service@kanyixia.xyz</text>
+      <image src='../../../public/imgs/equipment/emall.png' class='tel' mode="widthFix"></image>
+    </view>
+  </view>
+</view>

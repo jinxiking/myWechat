@@ -1,0 +1,80 @@
+/* pages/equipment/box/index.wxss */
+.card{
+  box-shadow:0px 0px 15px 0px rgba(0, 0, 0, 0.08);
+  border-radius:3px;
+  padding: 20rpx;
+}
+.item{
+  display: flex;
+  justify-content: flex-start;
+  line-height: 50rpx;
+  position: relative;
+  margin-bottom:30rpx; 
+  margin-top: 30rpx;
+}
+.title{
+  color:#999999;
+  font-size:26rpx;
+}
+.name{
+  color:#333333;
+  font-size: 30rpx;
+  margin-left:10rpx;
+}
+.mac{
+  color:#00B1A2;
+  margin-left:20rpx;
+}
+.copy{
+  color:#00B1A2;
+  font-size: 26rpx;
+  position:absolute;
+  top:0;
+  right:0;
+}
+.top{
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  justify-content: flex-end;
+  color:#00B1A2;
+  font-size: 26rpx;
+}
+.input_item{
+  display: flex;
+  margin-top:30rpx;
+  position: relative;
+  color:#999999;
+  font-size: 26rpx;
+  margin-bottom:30rpx;
+}
+.input_text{
+  line-height: 50rpx;
+  width: 20%;
+}
+.input{
+  color:#333333!important;
+  font-size: 30rpx;
+}
+.input{
+  width: 80%;
+  margin-left:20rpx;
+  border-bottom:1px solid rgba(0,0,0,0.1); 
+}
+.button_cont{
+  display: flex;
+  justify-content: center;
+}
+.unbindBtn{
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #C8C8C8;
+  color:#fff;
+  text-align: center;
+  margin-top: 50rpx;
+  margin-bottom: 80rpx;
+  border-radius:3px; 
+}
+
+

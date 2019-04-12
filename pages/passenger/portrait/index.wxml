@@ -7,7 +7,106 @@
       <view class='{{type ==1?"active_nav":""}}' bindtap='changType' data-type='1'>画像分析</view>
     </view>
   </view>
-  <view class='card'>
+
+  <!-- 客流分析部分 -->
+  <view class='card'  hidden='{{type != 0}}'>
+    <view class='card_title'>
+      <picker bindchange="bindShopPicker" value="{{shopIndex}}" range="{{shopListRealArr}}" class='shopPiker'>
+        <view class="shopPiker">
+          当前门店：{{shopListRealArr[shopIndex]}}
+          <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"      style='margin-left:5px'></image>
+        </view>
+      </picker>
+      <view bindtap='toDetail'> 
+        <text>查看当日明细</text>
+        <image src='../../../public/imgs/home/row.png' class='select_imgs_left' mode="widthFix"      style='margin-left:10rpx;margin-right:20rpx'></image>
+      </view>
+    </view>
+    <view class='top_content'>
+      <view class='top_name'>
+        <view>
+          <text>388</text>
+          <text class='tip_text'>路过人数</text>
+        </view>
+        <view>
+          <text>388</text>
+          <text class='tip_text'>路过人数</text>
+        </view>
+        <view>
+          <text>388</text>
+          <text class='tip_text'>进店率%</text>
+        </view>
+      
+      </view>
+      <view class='top_name'>
+        <view>
+          <text>388</text>
+          <text class='tip_text'>路过人数</text>
+        </view>
+        <view>
+          <text>388</text>
+          <text class='tip_text'>路过人数</text>
+        </view>
+        <view>
+          <text>388</text>
+          <text class='tip_text'>进店率%</text>
+        </view>
+      
+      </view>
+    </view>
+  </view>
+
+  <view class='card' style='margin-top:50rpx;' hidden='{{type != 0}}'>
+    <view class='card_title bgb'>
+      <text>历史查询</text>
+    </view>
+
+
+    <view class='nav_cont' style='margin-top:30rpx;'>
+      <view class='navs'>
+        <view class='nav first nav_p {{dimension ==0?"active_nav":""}}' bindtap='dimensionChange' data-type='0'>日</view>
+        <view class='nav end nav_p {{dimension ==1?"active_nav":""}}' bindtap='dimensionChange' data-type='1'>月</view>
+      </view>
+    </view>
+
+    
+    <view class='input_item' style='margin-top:50rpx;'>
+      <text class='input_text'>开始时间</text>
+      <picker bindchange="bindStartDate" value="{{searchDateStart}}"  mode="date">
+        <view class="picker">
+          <text wx:if='{{searchDateStart == ""}}'>请选择开始时间</text>
+          <text wx:else='{{searchDateStart != ""}}'>{{searchDateStart}}</text>
+          <view class='row_down'>
+            <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+    <view class='input_item'>
+      <text class='input_text'>结束时间</text>
+      <picker bindchange="bindEndDate" value="{{searchDateEnd}}" mode="date">
+        <view class="picker">
+          <text wx:if='{{searchDateEnd == ""}}'>请选择结束时间</text>
+          <text wx:else='{{searchDateEnd != ""}}'>{{searchDateEnd}}</text>
+          <view class='row_down'>
+            <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+
+
+    <view class='btn_cont'>
+      <view class='shadow_btn' bindtap='toDetail'>
+        按{{dimension==0?"日":"月"}}展示
+      </view>
+    </view>
+
+    
+  </view>
+  
+  <!-- 画像分析部分 -->
+  <view class='card' hidden='{{type != 1}}'>
     <view class='card_title'>
       <picker bindchange="bindShopPicker" value="{{shopIndex}}" range="{{shopListRealArr}}" class='shopPiker'>
         <view class="shopPiker">
@@ -52,7 +151,7 @@
 
 
 
-  <view class='card' style='margin-top:50rpx;'>
+  <view class='card' style='margin-top:50rpx;' wx:if='{{type == 1}}'>
     <view class='card_title bgb'>
       <text>查询结果</text>
     </view>

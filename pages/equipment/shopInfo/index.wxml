@@ -1,0 +1,41 @@
+<!--pages/equipment/shopInfo/index.wxml-->
+<view class='contentP'>
+    <view class='top'>
+      <text>保存</text>
+    </view>
+    <view class='input_item'>
+      <text class='input_text'>商户名称:</text>
+      <input class='code'  placeholder='支持12个字符以内的中、英文及数字' class='input' value='{{shopName}}' bindinput="bindNameInput" maxlength='12'></input>
+    </view>
+    <view class='input_item'>
+      <text class='input_text'>商户类型:</text>
+      <picker bindchange="bindPickerChange" value="{{shopIndex}}" range="{{shopTypeArr}}">
+        <view class="picker">
+          {{shopTypeArr[shopIndex]}}
+          <view class='row_down'>
+            <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+
+    <view class='input_item'>
+      <text class='input_text'>商户地区:</text>
+       <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+        <view class="picker">
+          <text wx:if='{{region.length == 0}}'>请选择地区</text>
+          
+          <text wx:if='{{region.length != 0}}'>{{region[0]}}-{{region[1]}}-{{region[2]}}</text>
+          
+          <view class='row_down'>
+            <image src='../../../public/imgs/login/row_down.png' class='select_imgs' mode="widthFix"></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+
+    <view class='input_item'>
+      <text class='input_text'>门店地址:</text>
+      <input class='code'  placeholder='请输入地址' class='input' value='{{adress}}' bindinput="bindAdressInput"></input>
+    </view>
+</view>

@@ -73,7 +73,8 @@ Page({
     }
   },
   data: {
-    type : '1',
+    dimension : '0',
+    type : '0',
     ec: {
       onInit: initChart
     },
@@ -105,12 +106,12 @@ Page({
     })
   },
   onReady() {
-    setTimeout(function () {
-      // 获取 chart 实例的方式
-      console.log(chart)
-      option.legend = {};
-      chart.setOption(option,true);
-    }, 2000);
+    // setTimeout(function () {
+    //   // 获取 chart 实例的方式
+    //   console.log(chart)
+    //   option.legend = {};
+    //   chart.setOption(option,true);
+    // }, 2000);
   },
   changTab(e) {
     let id = e.currentTarget.id;
@@ -134,10 +135,20 @@ Page({
     })
   },
   changType(e){
-   
     let index = e.currentTarget.dataset.type
     this.setData({
       type : index
+    })
+  },
+  dimensionChange(e){
+    let index = e.currentTarget.dataset.type
+    this.setData({
+      dimension: index
+    })
+  },
+  toDetail(){
+    wx.navigateTo({
+      url: '/pages/passenger/detail/index',
     })
   }
 });
