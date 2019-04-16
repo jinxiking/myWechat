@@ -28,7 +28,15 @@
     </view>
   </navigator>
 </view> -->
-
+ <navigator
+    url="/pages/home/myActivyList/index"
+  >
+    <view class='nav_content' bindtap='' href=''>
+      <view><image src='../../../public/imgs/home/nav_1.png' class='nav_img'></image></view>
+      
+      <text class='nav_text'>我的任务</text>
+    </view> 
+  </navigator>
 <view class='banner_content'>
   <swiper
     indicator-dots="{{indicatorDots}}" 

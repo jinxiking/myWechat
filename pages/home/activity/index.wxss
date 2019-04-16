@@ -1,4 +1,7 @@
 /* pages/home/activity/index.wxss */
-.active_content{
+/* .active_content{
   padding: 30rpx;
+} */
+.info_img{
+  width: 100%;
 }

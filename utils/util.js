@@ -40,7 +40,7 @@ const ajax = (option) =>{
     method: option.method,
     header: header,
     success : (res)=>{
-      wx.hideLoading();
+
       if (option.url == '/v1/user/info-add'){
         option.success(res.data);
         return;
@@ -58,7 +58,14 @@ const ajax = (option) =>{
           duration: 2000
         })
       }
+    },
+    complete:(res)=>{
+      wx.hideLoading();
+    },
+    fail : ()=>{
+    
     }
+
   })
 }
 

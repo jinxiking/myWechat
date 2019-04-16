@@ -30,9 +30,7 @@
   </view>
 </view>
 
-
-
-<view class='contentP mt30'>
+<view class='contentP mt30' wx:if='{{shopList.length != 0 }}'>
   <view class='title'>任务申请</view>
   <view class='task_new' wx:for='{{shopList}}' wx:key='{{index}}'>
     <text class='task_new_name'>{{item.name}}:</text>

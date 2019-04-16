@@ -16,7 +16,7 @@ Page({
    */
   onLoad: function (options) {
     //获取门店
-    this.getShopList();
+    this.getShopList(options.id);
     //获取任务详情
     this.getTaskDetail(options.id);
   },
@@ -34,14 +34,19 @@ Page({
       }
     })
   },
-  getShopList(){
+  getShopList(id){
     util.ajax({
       url: '/v1/task/get-ShopTaskInfo',
       method: 'GET',
+      data : {
+        task_id : id
+      },
       success: (res) => {
+     
         this.setData({
           shopList : res.data
         })
+     
       }
     })
   },

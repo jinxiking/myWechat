@@ -38,6 +38,8 @@ Page({
         })
         if (res.data.length != 0){
           this.getActiveList(res.data[0].ID)
+        }else{
+          this.getActiveList();
         }
       }
     })
@@ -54,7 +56,7 @@ Page({
       url: '/v1/task/get-mylist',
       method: 'GET',
       data : {
-        shop_id: shopId,
+        shop_id: shopId?shopId:'',
         page : 1,
         pageSize : 10
       },

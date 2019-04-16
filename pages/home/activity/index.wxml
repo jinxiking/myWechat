@@ -1,4 +1,4 @@
 <!--pages/home/activity/index.wxml-->
 <view class='active_content'>
-
+  <image src='{{detail.info_images}}' mode="widthFix" class='info_img'></image>
 </view>
